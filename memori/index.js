@@ -5,26 +5,7 @@ const app = express();
 // Importando os Controllers (onde estão as rotas)
 import RotasController from "./controllers/RotasController.js";
 import UsuariosController from "./controllers/UsuariosController.js";
-
-
-// Importando o Sequelize-Config com os dados da conexão
-import connection from "./config/sequelize-config.js";
-
-// Realizando a conexão com om banco de dados
-// then -> Trata o sucesso
-// catch -> Trata a falha
-connection.authenticate().then(() => {
-console.log("Conexão com o banco realizada com sucesso!");
-}).catch((error) => {
-  console.log(error);
-})
-
-// Criar o banco de dados do projeto (se ele não existir)
-connection.query(`CREATE DATABASE IF NOT EXISTS memori;`).then(() => {
-console.log("O banco de dados está criado");
-}).catch((error) => {
-  console.log(error);
-});
+import EstatisticasController from "./controllers/EstatisticasController.js";
 
 
 // Define o EJS como Renderizador de páginas
@@ -35,6 +16,7 @@ app.use(express.static("public"));
 // Definindo o uso das rotas dos Controllers
 app.use("/", UsuariosController);
 app.use("/", RotasController);
+app.use("/", EstatisticasController);
 
 // ROTA PRINCIPAL
 app.get("/", function (req, res) {

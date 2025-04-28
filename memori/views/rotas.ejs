@@ -1,0 +1,53 @@
+<%- include ('partials/header.ejs') %>
+<%- include ('partials/navbar.ejs') %>
+<%- include ('partials/headerUsuarios.ejs') %>
+
+
+<div class="container-formulario">
+    <h3> Registro de Rotas </h3>
+    <hr>
+    <div class="wrapper">
+    <div class="cadastrar">
+        <h4> Cadastrar nova Rota </h4>
+        <hr>
+        <form action="/clientes/new" method="POST">
+            <div class="inserir-dados">
+            <label> Titulo do Percurso:</label>
+            <input type="text" name="titulo-percurso" placeholder="Digite o titulo do percurso" class="form-input" required>
+            <br>
+            <label> Cidade localizada:</label>
+            <select name="Cidades" id="Cidades">
+                <option value="Registro">Registro</option>
+              </select> 
+              <br>
+            <label> Longitude:</label>
+            <input type="text" name="longitude-inicio" placeholder="Digite a longitude" class="form-input" required>
+            <label>Latitude:</label>
+            <input type="text" name="latitude-inicio" placeholder="Digite a latitude" class="form-input" required>
+            <br><br>
+            <hr>
+            <label> Permissões:</label><br>
+            <input type="checkbox" name="editor" placeholder="Digite o nome de usuário"  >
+            <label for="editor" class="texto-checkbox"> Editor</label>
+            <input type="checkbox" name="leitor" placeholder="Digite o nome de usuário" > 
+            <label for="leitor" class="texto-checkbox"> Leitor</label>
+            <div class="div-botao">
+                <button name="cadastrar-usuario" class="button-cadastro"> Cadastrar </button>
+            </div>
+            </div>
+        </form>
+    </div>
+
+
+    <div class="consultar">
+        <h4> Consultar Usuários </h4>
+        <hr>
+        <table>
+          
+        </table>
+    </div>
+</div>
+    
+</div>
+
+<%- include ('partials/footer.ejs') %>

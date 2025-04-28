@@ -4,12 +4,12 @@ import express from "express"
 const router = express.Router(); // Método para gerenciar a rota
 
 //ROTA DE PRODUTOS
-router.get("/usuarios", (req, res) => {
+router.get("/estatisticas", (req, res) => {
     // Coletando o parâmetrop da rota
   
   // ARRAY COM LISTA DE PRODUTOS
   
-    const usuarios = [
+    const estatisticas = [
         {nome:"Celular Motorola E22", preco: 1200, categoria:"Eletroportáteis"},
         {nome:"Tablet Samsung", preco: 900, categoria:"Eletrônicos"},
         {nome:"Notebook Lenovo", preco: 3200, categoria:"Computadores"},
@@ -17,9 +17,9 @@ router.get("/usuarios", (req, res) => {
     ];
   
   
-    res.render("usuarios", {
+    res.render("estatisticas", {
       // Enviando a variável produto para a página
-      usuarios : usuarios,
+      estatisticas : estatisticas,
     });
   });
   
