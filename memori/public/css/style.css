@@ -282,7 +282,7 @@ h4{
     position: inherit;
     top:5px;
     padding: 25px;
-    width: 40%;
+    width: 35%;
     background-color: #fff;
     border-color: #c7c7c7;
     border-width: 1px;
@@ -298,8 +298,8 @@ h4{
     text-align: left;
     padding:10px;
     font-family:Codec cold trial;
-    font-weight: 800;
-    font-size: 12px;
+    font-weight: 400;
+    font-size: 15px;
     width: 100%;
     top: 5px;
 }
@@ -329,17 +329,54 @@ h4{
   font-family: Codec cold trial;
 }
 
+.button-cadastro:hover{
+    background-color: #D8FFDC; /* Green */
+    transition: 0.2s ease-out;
+    border: none;
+    color: #6BCB77;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    border-radius: 12px;
+    font-family: Codec cold trial;
+  }
+
 .div-botao{
    text-align: right;
 }
 
 /* CONSULTAR USUÁRIOS*/
 
+table{
+    padding: 2px ;
+    border-color: #c7c7c7;
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 1px;
+    line-height: 30px;
+    width: 100%;
+    height: 15px;
+    text-align: left;
+}
+table thead th{
+    font-family: Codec cold trial;
+    padding: 5px;
+    font-weight: 600 !important;
+}
+
+table tr td{
+    font-family: Codec cold trial;
+    padding: 5px;
+    font-weight: 400 !important;
+}
+
 .consultar{
     position: inherit;
     top:5px;
     padding: 25px;
-    width: 58%;
+    width: 63%;
     background-color: #fff;
     border-color: #c7c7c7;
     border-width: 1px;
@@ -361,3 +398,138 @@ select{
     width:100%;
     height: 25px;
 }
+
+.abrir-mapa{
+  background-color: #6BCB77; 
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  border-radius: 12px;
+  font-family: Codec cold trial;
+}
+
+.abrir-mapa:hover{
+    background-color: #D8FFDC; 
+    transition: 0.2s ease-out;
+    border: none;
+    color: #6BCB77;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    border-radius: 12px;
+    font-family: Codec cold trial;
+  }
+
+  .editar-usuario{
+    background-color: #4D96FF; 
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    border-radius: 12px;
+    font-family: Codec cold trial;
+  }
+  
+  .editar-usuario:hover{
+      background-color: #C8FCFF; 
+      transition: 0.2s ease-out;
+      border: none;
+      color: #4D96FF;
+      padding: 10px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 15px;
+      border-radius: 12px;
+      font-family: Codec cold trial;
+    }
+
+    .excluir-usuario{
+        background-color: #FF6B6B; 
+        border: none;
+        color: white;
+        padding: 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 15px;
+        border-radius: 12px;
+        font-family: Codec cold trial;
+      }
+      
+      .excluir-usuario:hover{
+          background-color: #FFE7E7; 
+          transition: 0.2s ease-out;
+          border: none;
+          color: #FF6B6B;
+          padding: 10px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 15px;
+          border-radius: 12px;
+          font-family: Codec cold trial;
+        }
+
+    .excluir-rota{
+        background-color: #FF6B6B; 
+        border: none;
+        color: white;
+        padding: 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 15px;
+        border-radius: 12px;
+        font-family: Codec cold trial;
+      }
+      
+      .excluir-rota:hover{
+          background-color: #FFE7E7; 
+          transition: 0.2s ease-out;
+          border: none;
+          color: #FF6B6B;
+          padding: 10px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 15px;
+          border-radius: 12px;
+          font-family: Codec cold trial;
+        }
+
+        .editar-rota{
+            background-color: #4D96FF; 
+            border: none;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 15px;
+            border-radius: 12px;
+            font-family: Codec cold trial;
+          }
+          
+          .editar-rota:hover{
+              background-color: #C8FCFF; 
+              transition: 0.2s ease-out;
+              border: none;
+              color: #4D96FF;
+              padding: 10px;
+              text-align: center;
+              text-decoration: none;
+              display: inline-block;
+              font-size: 15px;
+              border-radius: 12px;
+              font-family: Codec cold trial;
+            }

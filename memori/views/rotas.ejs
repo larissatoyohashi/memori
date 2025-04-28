@@ -25,12 +25,6 @@
             <label>Latitude:</label>
             <input type="text" name="latitude-inicio" placeholder="Digite a latitude" class="form-input" required>
             <br><br>
-            <hr>
-            <label> Permissões:</label><br>
-            <input type="checkbox" name="editor" placeholder="Digite o nome de usuário"  >
-            <label for="editor" class="texto-checkbox"> Editor</label>
-            <input type="checkbox" name="leitor" placeholder="Digite o nome de usuário" > 
-            <label for="leitor" class="texto-checkbox"> Leitor</label>
             <div class="div-botao">
                 <button name="cadastrar-usuario" class="button-cadastro"> Cadastrar </button>
             </div>
@@ -38,13 +32,35 @@
         </form>
     </div>
 
-
-    <div class="consultar">
-        <h4> Consultar Usuários </h4>
-        <hr>
-        <table>
-          
-        </table>
+        <div class="consultar">
+            <h4> Consultar Rotas </h4>
+            <table>
+              <thead>
+                <th> Id </th>
+                <th> Nome da Rota </th>
+                <th> Cidade </th>
+                <th> Longitude </th>
+                <th> Latitude </th>
+              </thead>
+                <tr>
+                    <td>a</td>
+                    <td>KKKK</td>
+                    <td>Registro/SP</td>
+                    <td>xxxxxxxxxx</td>
+                    <td>yyyyyyyyyy</td>
+                    <td>
+                        <Button name="abrir-mapa" class="abrir-mapa"> <i class = "fas fa-map"></i></Button>
+                    </td>
+                    <td>
+                        <Button name="editar-rota" class="editar-usuario"> <i class = "fas fa-pencil"></i>
+                        </Button>
+                    </td>
+                    <td>
+                        <Button name="excluir-rota" class="excluir-rota"> <i class = "fas fa-cancel"></i></Button>
+                    </td>
+                </tr>
+                
+            </table>
     </div>
 </div>
     
