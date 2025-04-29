@@ -4,3 +4,9 @@
 //const year = date.getFullYear()
 //const currentDate = document.querySelector('.currentDate')
 //currentDate.innerHTML = `Novos pedidos foram realizados desde o último acesso ao sistema. Hoje é <strong>${day}/${month}/${year}</strong>.`
+
+function abrirModalMapa(){
+    const modal = document.getElementById('janela-modal');
+    modal.classList.add('abrir');
+    modal.
+}

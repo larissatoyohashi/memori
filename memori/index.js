@@ -6,6 +6,7 @@ const app = express();
 import RotasController from "./controllers/RotasController.js";
 import UsuariosController from "./controllers/UsuariosController.js";
 import EstatisticasController from "./controllers/EstatisticasController.js";
+import CheckpointsController from "./controllers/CheckpointsController.js";
 
 // Define o EJS como Renderizador de páginas
 app.set("view engine", "ejs");
@@ -16,6 +17,7 @@ app.use(express.static("public"));
 app.use("/", UsuariosController);
 app.use("/", RotasController);
 app.use("/", EstatisticasController);
+app.use("/", CheckpointsController);
 
 // ROTA PRINCIPAL
 app.get("/", function (req, res) {

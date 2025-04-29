@@ -42,7 +42,7 @@ body{
 }
 
 .slide{
-    height: 900px;
+    height: 800px;
     width: 200px;
     top: 0;
     position: absolute;
@@ -266,13 +266,13 @@ h4{
 
 .container-formulario{
     position: relative;
-    top: 10px;
+    top: 80px;
     padding-top: 5px;
     padding-left: 5px;
     padding-right: 5px;
     padding-bottom: 5px;
     width: 100%;
-    height: 800px;
+    height: auto;
     box-shadow: 0 0 15px  rgba(0,0,0,0.3);
     background-color: #fff;
     border-radius: 10px;
@@ -427,7 +427,7 @@ select{
     font-family: Codec cold trial;
   }
 
-  .editar-usuario{
+  .btn-editar{
     background-color: #4D96FF; 
     border: none;
     color: white;
@@ -440,7 +440,7 @@ select{
     font-family: Codec cold trial;
   }
   
-  .editar-usuario:hover{
+  .btn-editar:hover{
       background-color: #C8FCFF; 
       transition: 0.2s ease-out;
       border: none;
@@ -454,7 +454,7 @@ select{
       font-family: Codec cold trial;
     }
 
-    .excluir-usuario{
+    .btn-excluir{
         background-color: #FF6B6B; 
         border: none;
         color: white;
@@ -467,7 +467,7 @@ select{
         font-family: Codec cold trial;
       }
       
-      .excluir-usuario:hover{
+      .btn-excluir:hover{
           background-color: #FFE7E7; 
           transition: 0.2s ease-out;
           border: none;
@@ -480,57 +480,3 @@ select{
           border-radius: 12px;
           font-family: Codec cold trial;
         }
-
-    .excluir-rota{
-        background-color: #FF6B6B; 
-        border: none;
-        color: white;
-        padding: 10px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 15px;
-        border-radius: 12px;
-        font-family: Codec cold trial;
-      }
-      
-      .excluir-rota:hover{
-          background-color: #FFE7E7; 
-          transition: 0.2s ease-out;
-          border: none;
-          color: #FF6B6B;
-          padding: 10px;
-          text-align: center;
-          text-decoration: none;
-          display: inline-block;
-          font-size: 15px;
-          border-radius: 12px;
-          font-family: Codec cold trial;
-        }
-
-        .editar-rota{
-            background-color: #4D96FF; 
-            border: none;
-            color: white;
-            padding: 10px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 15px;
-            border-radius: 12px;
-            font-family: Codec cold trial;
-          }
-          
-          .editar-rota:hover{
-              background-color: #C8FCFF; 
-              transition: 0.2s ease-out;
-              border: none;
-              color: #4D96FF;
-              padding: 10px;
-              text-align: center;
-              text-decoration: none;
-              display: inline-block;
-              font-size: 15px;
-              border-radius: 12px;
-              font-family: Codec cold trial;
-            }

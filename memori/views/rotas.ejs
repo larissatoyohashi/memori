@@ -1,6 +1,5 @@
 <%- include ('partials/header.ejs') %>
 <%- include ('partials/navbar.ejs') %>
-<%- include ('partials/headerUsuarios.ejs') %>
 
 
 <div class="container-formulario">
@@ -10,7 +9,7 @@
     <div class="cadastrar">
         <h4> Cadastrar nova Rota </h4>
         <hr>
-        <form action="/clientes/new" method="POST">
+        <form action="/rotas/new" method="POST">
             <div class="inserir-dados">
             <label> Titulo do Percurso:</label>
             <input type="text" name="titulo-percurso" placeholder="Digite o titulo do percurso" class="form-input" required>
@@ -34,6 +33,8 @@
 
         <div class="consultar">
             <h4> Consultar Rotas </h4>
+            <div class= "pesquisa">
+            </div>
             <table>
               <thead>
                 <th> Id </th>
@@ -52,18 +53,24 @@
                         <Button name="abrir-mapa" class="abrir-mapa"> <i class = "fas fa-map"></i></Button>
                     </td>
                     <td>
-                        <Button name="editar-rota" class="editar-usuario"> <i class = "fas fa-pencil"></i>
+                        <Button name="editar-rota" class="btn-editar"> <i class = "fas fa-pencil"></i>
                         </Button>
                     </td>
                     <td>
-                        <Button name="excluir-rota" class="excluir-rota"> <i class = "fas fa-cancel"></i></Button>
+                        <Button name="excluir-rota" class="btn-excluir"> <i class = "fas fa-cancel"></i></Button>
                     </td>
                 </tr>
                 
             </table>
     </div>
 </div>
-    
+</div>
+
+<div class="janela-modal" id="janela-modal-mapa">
+    <div class="modal-mapa">
+        <button class="fechar-modal" id="fechar-modal">X</button>
+        <h1>Oi</h1>
+    </div>
 </div>
 
 <%- include ('partials/footer.ejs') %>
