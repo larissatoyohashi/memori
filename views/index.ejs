@@ -1,0 +1,21 @@
+<%- include ('partials/header.ejs') %>
+<%- include ('partials/navbar.ejs') %>
+
+<div class="banner">
+    <img src="/imgs/Banner.png" width="100%">
+
+    <a-scene
+        vr-mode-ui="enabled: false"
+		embedded
+        arjs='sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;'>
+        
+        <a-camera gps-camera rotation-reader></a-camera>
+
+        <a-entity gltf-model="./assets/magnemite/scene.gltf" rotation="0 180 0" scale="0.15 0.15 0.15" gps-entity-place="longitude: -47.851757; latitude: -24.484916;" animation-mixer/>
+
+	</a-scene>
+
+</div>
+   
+
+<%- include ('partials/footer.ejs') %>
