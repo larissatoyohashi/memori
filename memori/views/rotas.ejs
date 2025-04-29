@@ -1,0 +1,69 @@
+<%- include ('partials/header.ejs') %>
+<%- include ('partials/navbar.ejs') %>
+<%- include ('partials/headerUsuarios.ejs') %>
+
+
+<div class="container-formulario">
+    <h3> Registro de Rotas </h3>
+    <hr>
+    <div class="wrapper">
+    <div class="cadastrar">
+        <h4> Cadastrar nova Rota </h4>
+        <hr>
+        <form action="/clientes/new" method="POST">
+            <div class="inserir-dados">
+            <label> Titulo do Percurso:</label>
+            <input type="text" name="titulo-percurso" placeholder="Digite o titulo do percurso" class="form-input" required>
+            <br>
+            <label> Cidade localizada:</label>
+            <select name="Cidades" id="Cidades">
+                <option value="Registro">Registro</option>
+              </select> 
+              <br>
+            <label> Longitude:</label>
+            <input type="text" name="longitude-inicio" placeholder="Digite a longitude" class="form-input" required>
+            <label>Latitude:</label>
+            <input type="text" name="latitude-inicio" placeholder="Digite a latitude" class="form-input" required>
+            <br><br>
+            <div class="div-botao">
+                <button name="cadastrar-usuario" class="button-cadastro"> Cadastrar </button>
+            </div>
+            </div>
+        </form>
+    </div>
+
+        <div class="consultar">
+            <h4> Consultar Rotas </h4>
+            <table>
+              <thead>
+                <th> Id </th>
+                <th> Nome da Rota </th>
+                <th> Cidade </th>
+                <th> Longitude </th>
+                <th> Latitude </th>
+              </thead>
+                <tr>
+                    <td>a</td>
+                    <td>KKKK</td>
+                    <td>Registro/SP</td>
+                    <td>xxxxxxxxxx</td>
+                    <td>yyyyyyyyyy</td>
+                    <td>
+                        <Button name="abrir-mapa" class="abrir-mapa"> <i class = "fas fa-map"></i></Button>
+                    </td>
+                    <td>
+                        <Button name="editar-rota" class="editar-usuario"> <i class = "fas fa-pencil"></i>
+                        </Button>
+                    </td>
+                    <td>
+                        <Button name="excluir-rota" class="excluir-rota"> <i class = "fas fa-cancel"></i></Button>
+                    </td>
+                </tr>
+                
+            </table>
+    </div>
+</div>
+    
+</div>
+
+<%- include ('partials/footer.ejs') %>
