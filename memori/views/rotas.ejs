@@ -24,6 +24,14 @@
             <label>Latitude:</label>
             <input type="text" name="latitude-inicio" placeholder="Digite a latitude" class="form-input" required>
             <br><br>
+
+            <label>Imagem de capa:</label>
+            <div class="cadastro-arquivo" method="post" enctype="multipart/form-data">
+                <form action="/upload-capa">
+                    <input type="file" name="upload-capa" class="btn-arquivo" required>    
+                </form>
+            </div>
+
             <div class="div-botao">
                 <button name="cadastrar-rota" class="button-cadastro"> Cadastrar </button>
             </div>
@@ -42,6 +50,7 @@
                 <th> Cidade </th>
                 <th> Longitude </th>
                 <th> Latitude </th>
+                <th> Capa </th>
               </thead>
                 <tr>
                     <td>a</td>
@@ -49,6 +58,7 @@
                     <td>Registro/SP</td>
                     <td>xxxxxxxxxx</td>
                     <td>yyyyyyyyyy</td>
+                    <td><img src="#" height="20px"></td>
                     <td>
                         <Button name="abrir-mapa" class="abrir-mapa"> <i class = "fas fa-map"></i></Button>
                     </td>
