@@ -8,6 +8,21 @@ import UsuariosController from "./controllers/UsuariosController.js";
 import EstatisticasController from "./controllers/EstatisticasController.js";
 import CheckpointsController from "./controllers/CheckpointsController.js";
 
+import connection from "./config/sequelize-config.js";
+import CadastrarRotas from "./models/CadastrarRotas.js";
+
+connection.authenticate().then(() =>{
+  console.log("Conexão com o banco de dados realizada com sucesso!");
+}).catch((erro) => {
+  console.log(erro);
+});
+
+connection.query(`Create database if not exists memori;`). then (() => {
+  console.log("O banco de dados está criado!");
+}).catch((error) => {
+  console.log(error);  
+});
+
 // Define o EJS como Renderizador de páginas
 app.set("view engine", "ejs");
 // Define o uso da pasta "public" para uso de arquivos estáticos

@@ -1,20 +1,15 @@
-import express from "express"
+import express from "express";
+const router = express.Router();
 
-// Carregando o método do Express para gerenciamento de Rotas
-const router = express.Router(); // Método para gerenciar a rota
+// Importante Model de Cadastrar Rotas
+//import CadastrarRotas from "../models/CadastrarRotas";
+
 
 //ROTA DE PRODUTOS
 router.get("/rotas", (req, res) => {
     // Coletando o parâmetrop da rota
   
   // ARRAY COM LISTA DE PRODUTOS
-  
-    const rotas = [
-        {nome:"Celular Motorola E22", preco: 1200, categoria:"Eletroportáteis"},
-        {nome:"Tablet Samsung", preco: 900, categoria:"Eletrônicos"},
-        {nome:"Notebook Lenovo", preco: 3200, categoria:"Computadores"},
-        {nome:"Fone Bluetooth", preco: 150, categoria:"Periféricos"},
-    ];
   
   
     res.render("rotas", {

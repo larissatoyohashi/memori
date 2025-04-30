@@ -1,5 +1,8 @@
 import express from "express"
 
+//import Modelagens from "../models/Modelagens";
+// import Checkpoints
+
 // Carregando o método do Express para gerenciamento de Rotas
 const router = express.Router(); // Método para gerenciar a rota
 
