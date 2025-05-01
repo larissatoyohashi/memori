@@ -24,6 +24,7 @@
                 <option value="#">KKKK</option>
               </select> 
               <br>
+
             <label> Longitude do Checkpoint:</label>
             <input type="text" name="longitude-checkpoint" placeholder="Digite a longitude" class="form-input" required>
             <label>Latitude do Checkpoint:</label>
@@ -45,16 +46,17 @@
     </div>
 
         <div class="consultar">
-            <h4> Consultar Rotas </h4>
-            <div class= "pesquisa">
-            </div>
+            <h4> Consultar Checkpoint </h4>
             <table>
               <thead>
                 <th> Id </th>
-                <th> Nome da Rota </th>
-                <th> Cidade </th>
+                <th> Nome do Checkpoint </th>
+                <th> Descrição </th>
+                <th> Rota </th>
+                <th> Descrição </th>
                 <th> Longitude </th>
                 <th> Latitude </th>
+                <th> Imagem </th>
               </thead>
                 <tr>
                     <td>a</td>
@@ -62,6 +64,9 @@
                     <td>Registro/SP</td>
                     <td>xxxxxxxxxx</td>
                     <td>yyyyyyyyyy</td>
+                    <td>Registro/SP</td>
+                    <td>xxxxxxxxxx</td>
+                    <td><img src="#" height="20px"></td>
                     <td>
                         <Button name="abrir-mapa" class="abrir-mapa"> <i class = "fas fa-map"></i></Button>
                     </td>
@@ -82,26 +87,32 @@
     <div class="cadastrar">
         <h4> Cadastrar Modelagem </h4>
         <hr>
-        <form action="/checkpoints/new" method="POST">
+        <form action="/modelagem/new" method="POST">
             <div class="inserir-dados">
-            <label> Nome do Checkpoint:</label>
-            <input type="text" name="nome-checkpoint" placeholder="Digite nome do checkpoint" class="form-input" required>
+            <label> Nome da Modelagem:</label>
+            <input type="text" name="nome-modelagem" placeholder="Digite nome do checkpoint" class="form-input" required>
             <br>
 
-            <label> Descrição do Checkpoint:</label>
-            <textarea id="descricao-checkpoint" name="descricao-checkpoint" class="form-input" placeholder="Digite nome do checkpoint">
-            </textarea>
-
-            <br>
-            <label> Rota do Checkpoint: </label>
-            <select name="rota-checkpoint" id="rota-checkpoint">
-                <option value="#">KKKK</option>
+            <label> Cidade: </label>
+            <select name="cidade-modelagem" id="cidade-modelagem">
+                <option value="#">Registro</option>
               </select> 
               <br>
-            <label> Longitude do Checkpoint:</label>
-            <input type="text" name="longitude-checkpoint" placeholder="Digite a longitude" class="form-input" required>
-            <label>Latitude do Checkpoint:</label>
-            <input type="text" name="latitude-checkpoint" placeholder="Digite a latitude" class="form-input" required>
+
+            <label> Checkpoint: </label>
+            <select name="checkpoint-modelagem" id="checkpoint-modelagem">
+                <option value="#">Galpão do KKKK</option>
+              </select> 
+              <br>
+
+             
+              <label>Arquivo da Modelagem: </label>
+              <div class="cadastro-arquivo" method="post" enctype="multipart/form-data">
+                  <form action="/upload-modelagem" >
+                      <input type="file" name="upload-modelagem" class="btn-arquivo"  required>    
+                  </form>
+              </div>
+
             <br><br>
             <div class="div-botao">
                 <button name="cadastrar-checkpoint" class="button-cadastro"> Cadastrar </button>
@@ -117,17 +128,15 @@
             <table>
               <thead>
                 <th> Id </th>
-                <th> Nome da Rota </th>
+                <th> Nome da Modelagem </th>
+                <th> Checkpoint </th>
                 <th> Cidade </th>
-                <th> Longitude </th>
-                <th> Latitude </th>
               </thead>
                 <tr>
-                    <td>a</td>
+                    <td>Id</td>
                     <td>KKKK</td>
                     <td>Registro/SP</td>
                     <td>xxxxxxxxxx</td>
-                    <td>yyyyyyyyyy</td>
                     <td>
                         <Button name="abrir-mapa" class="abrir-mapa"> <i class = "fas fa-cube"></i></Button>
                     </td>
@@ -144,6 +153,105 @@
     </div>
 </div>
     
+<div class="wrapper">
+    <div class="cadastrar">
+        <h4> Cadastrar Quiz </h4>
+        <hr>
+        <form action="/modelagem/new" method="POST">
+            <div class="inserir-dados">
+            <label> Nome do Quiz</label>
+            <input type="text" name="nome-quiz" placeholder="Digite nome do quiz" class="form-input" required>
+            <br>
+
+            <label> Checkpoint: </label>
+            <select name="checkpoint-quiz" id="checkpoint-quiz">
+                <option value="#">Galpão do KKKK</option>
+              </select> 
+              <br>
+
+              <label> Alternativa A</label>
+              <input type="text" name="alternativa-A" placeholder="Digite a primeira alternativa" class="form-input" required>
+              <br>
+
+              <label> Alternativa B</label>
+              <input type="text" name="alternativa-A" placeholder="Digite a segunda alternativa" class="form-input" required>
+              <br>
+
+              <label> Alternativa C</label>
+              <input type="text" name="alternativa-C" placeholder="Digite a terceira alternativa" class="form-input" required>
+              <br>
+
+              <label> Alternativa D</label>
+              <input type="text" name="alternativa-D" placeholder="Digite a quarta alternativa" class="form-input" required>
+              <br>
+
+              <label> Alternativa E</label>
+              <input type="text" name="alternativa-E" placeholder="Digite a quinta alternativa" class="form-input" required>
+              <br>
+
+              <label> Alternativa correta: </label>
+            <select name="alternativa-correta" id="alternativa-correta">
+                <option value="#">A</option>
+                <option value="#">B</option>
+                <option value="#">C</option>
+                <option value="#">D</option>
+                <option value="#">E</option>
+              </select> 
+              <br>
+
+              <label>Vídeo explicativo: </label>
+              <div class="cadastro-arquivo" method="post" enctype="multipart/form-data">
+                      <input type="file" name="upload-video-quiz" class="btn-arquivo"  required>    
+              </div>
+
+            <div class="div-botao">
+                <button name="cadastrar-checkpoint" class="button-cadastro"> Cadastrar </button>
+            </div>
+            </div>
+        </form>
+    </div>
+
+        <div class="consultar">
+            <h4> Consultar Modelagem </h4>
+            <div class= "pesquisa">
+            </div>
+            <table>
+              <thead>
+                <th> Id </th>
+                <th> Nome do Quiz </th>
+                <th> Checkpoint </th>
+                <th> Alternativa A </th>
+                <th> Alternativa B </th>
+                <th> Alternativa C </th>
+                <th> Alternativa D </th>
+                <th> Alternativa E </th>
+                <th> Alternativa Correta </th>
+              </thead>
+                <tr>
+                    <td>Id</td>
+                    <td>KKKK</td>
+                    <td>Registro/SP</td>
+                    <td>xxxxxxxxxx</td>
+                    <td>Id</td>
+                    <td>KKKK</td>
+                    <td>Registro/SP</td>
+                    <td>xxxxxxxxxx</td>
+                    <td>Registro/SP</td>
+                    <td>xxxxxxxxxx</td>
+
+                    <td>
+                        <Button name="editar-rota" class="btn-editar"> <i class = "fas fa-pencil"></i>
+                        </Button>
+                    </td>
+                    <td>
+                        <Button name="excluir-rota" class="btn-excluir"> <i class = "fas fa-cancel"></i></Button>
+                    </td>
+                </tr>
+            </table>
+    </div>
+</div>
+
+
 </div>
 
 <%- include ('partials/footer.ejs') %>
