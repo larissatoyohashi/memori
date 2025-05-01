@@ -2,7 +2,7 @@ import express from "express";
 const router = express.Router();
 
 // Importante Model de Cadastrar Rotas
-//import CadastrarRotas from "../models/CadastrarRotas";
+//import CadastrarRotas from "../models/CadastrarRotas.js";
 
 
 //ROTA DE PRODUTOS

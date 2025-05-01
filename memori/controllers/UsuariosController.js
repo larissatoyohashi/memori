@@ -3,7 +3,7 @@ import express from "express"
 // Carregando o método do Express para gerenciamento de Rotas
 const router = express.Router(); // Método para gerenciar a rota
 
-//import Usuarios from "../models/Usuarios";
+//import Usuarios from "../models/Usuarios.js";
 
 //ROTA DE PRODUTOS
 router.get("/usuarios", (req, res) => {
