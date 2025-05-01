@@ -11,13 +11,10 @@ import CheckpointsController from "./controllers/CheckpointsController.js";
 import connection from "./config/sequelize-config.js";
 
 import CadastrarRotas from "./models/CadastrarRotas.js";
-import Checkpoints from "..models/Checkpoints.js";
-import Cidades from "..models/Cidades.js";
-import Localidades from "./models/Localidades.js";
-import Logins from "./models/Logins.js";
-import Modelagens from "../models/Modelagens.js";
+import Checkpoints from "./models/Checkpoints.js";
+import Modelagens from "./models/Modelagens.js";
 import Quizzes from "./models/Quizzes.js";
-import Usuarios from "../models/Usuarios.js";
+import Usuarios from "./models/Usuarios.js";
 
 connection.authenticate().then(() =>{
   console.log("Conexão com o banco de dados realizada com sucesso!");

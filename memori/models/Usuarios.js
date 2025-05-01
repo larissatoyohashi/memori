@@ -24,4 +24,5 @@ const Usuarios = connection.define('Usuarios',{
     }
 })
 Usuarios.sync({forse:false});
+
 export default Usuarios;
