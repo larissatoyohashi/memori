@@ -480,3 +480,58 @@ select{
           border-radius: 12px;
           font-family: Codec cold trial;
         }
+<<<<<<< Updated upstream
+=======
+
+    .btn-arquivo{
+    border: none;
+    color: #111;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    border-radius: 12px;
+    font-family: Louis George Cafe;
+    }
+
+
+/* MODAL */
+
+.corpo-modal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+.abrir-modelagem{
+    background-color: #6BCB77; 
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    border-radius: 12px;
+    font-family: Louis George Cafe;
+  }
+  
+  .abrir-modelagem:hover{
+      background-color: #D8FFDC; 
+      transition: 0.2s ease-out;
+      border: none;
+      color: #6BCB77;
+      padding: 10px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 15px;
+      border-radius: 12px;
+      font-family: Louis George Cafe;
+    }
+
+  
+>>>>>>> Stashed changes
