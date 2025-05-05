@@ -6,8 +6,7 @@ const connection = new Sequelize({  // Objeto que vai ser a instância da classe
     host: 'localhost',
     username: 'root',
     password: '',
-    // Comente a linha abaixo na primeira execução do projeto
-    // database: 'memori',
+    database: 'memori',
     timezone: "-03:00"
 });
 
