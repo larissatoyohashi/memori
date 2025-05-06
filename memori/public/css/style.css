@@ -1,3 +1,12 @@
+@font-face {
+    font-family: 'coolvetica';
+    src: url('fonts/coolvetica/Coolvetica RG.otf') format('opentype');
+  }
+
+  @font-face {
+    font-family: 'Louis George Cafe';
+    src: url('fonts/louis_george_cafe/Louis George Cafe.ttf') format('truetype');
+  }
 
 *{
     margin:0 ;
@@ -34,7 +43,7 @@ body{
     font-size: 14px;
     font-weight: 800;
     text-align: right;
-    font-family: codec cold trial;
+    font-family: Louis George Cafe;
     font-style: normal;
     padding-right: 30px;
     padding-top:0;
@@ -42,7 +51,7 @@ body{
 }
 
 .slide{
-    height: 800px;
+    height: 1200px;
     width: 200px;
     top: 0;
     position: absolute;
@@ -104,7 +113,7 @@ ul li a{
     text-transform: capitalize;
     text-decoration: none;
     transition: 0.2s ease-out;
-    font-family: Codec cold trial;
+    font-family:  Louis George Cafe;
     font-style: normal;
    
     
@@ -235,7 +244,7 @@ ul li ul.dropdown-rotas li {
 /* FORMULÁRIOS */
 
 label{
-    font-family: Codec cold trial;
+    font-family: Louis George Cafe;
     font-weight: 800;
     font-size: 15px;
 }
@@ -298,7 +307,7 @@ h4{
     border-radius: 10px;
     text-align: left;
     padding:10px;
-    font-family:Codec cold trial;
+    font-family:Louis George Cafe;
     font-weight: 400;
     font-size: 15px;
     width: 100%;
@@ -327,7 +336,7 @@ h4{
   display: inline-block;
   font-size: 15px;
   border-radius: 12px;
-  font-family: Codec cold trial;
+  font-family: Louis George Cafe;
 }
 
 .button-cadastro:hover{
@@ -341,7 +350,7 @@ h4{
     display: inline-block;
     font-size: 15px;
     border-radius: 12px;
-    font-family: Codec cold trial;
+    font-family: Louis George Cafe;
   }
 
 .div-botao{
@@ -362,13 +371,13 @@ table{
     text-align: left;
 }
 table thead th{
-    font-family: Codec cold trial;
+    font-family: Louis George Cafe;
     padding: 5px;
     font-weight: 600 !important;
 }
 
 table tr td{
-    font-family: Codec cold trial;
+    font-family: Louis George Cafe;
     padding: 5px;
     font-weight: 400 !important;
 }
@@ -383,6 +392,8 @@ table tr td{
     border-width: 1px;
     border-style: solid;
     border-radius: 10px;
+    overflow: auto;
+    height: 700px;
 }
 
 .wrapper{
@@ -395,7 +406,7 @@ table tr td{
 select{
     font-size: 15px;
     border-radius: 5px;
-    font-family: Codec cold trial;
+    font-family: Louis George Cafe;
     width:100%;
     height: 25px;
 }
@@ -410,7 +421,7 @@ select{
   display: inline-block;
   font-size: 15px;
   border-radius: 12px;
-  font-family: Codec cold trial;
+  font-family: Louis George Cafe;
 }
 
 .abrir-mapa:hover{
@@ -424,7 +435,7 @@ select{
     display: inline-block;
     font-size: 15px;
     border-radius: 12px;
-    font-family: Codec cold trial;
+    font-family: Louis George Cafe;
   }
 
   .btn-editar{
@@ -437,7 +448,7 @@ select{
     display: inline-block;
     font-size: 15px;
     border-radius: 12px;
-    font-family: Codec cold trial;
+    font-family: Louis George Cafe;
   }
   
   .btn-editar:hover{
@@ -451,7 +462,7 @@ select{
       display: inline-block;
       font-size: 15px;
       border-radius: 12px;
-      font-family: Codec cold trial;
+      font-family: Louis George Cafe;
     }
 
     .btn-excluir{
@@ -464,7 +475,7 @@ select{
         display: inline-block;
         font-size: 15px;
         border-radius: 12px;
-        font-family: Codec cold trial;
+        font-family:Louis George Cafe;
       }
       
       .btn-excluir:hover{
@@ -478,10 +489,9 @@ select{
           display: inline-block;
           font-size: 15px;
           border-radius: 12px;
-          font-family: Codec cold trial;
+          font-family: Louis George Cafe;
         }
-<<<<<<< Updated upstream
-=======
+
 
     .btn-arquivo{
     border: none;
@@ -533,5 +543,3 @@ select{
       font-family: Louis George Cafe;
     }
 
-  
->>>>>>> Stashed changes
