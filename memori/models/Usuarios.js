@@ -6,15 +6,15 @@ const Usuarios = connection.define('Usuarios',{
         type: Sequelize.STRING,
         allowNull: false,
     },
-    nome_usuario:{
+    nomeUsuario:{
         type: Sequelize.STRING,
         allowNull: false, 
     },
-    email_usuario:{
+    emailUsuario:{
         type: Sequelize.STRING,
         allowNull: false,
     },
-    senha_usuario:{
+    senhaUsuario:{
         type: Sequelize.STRING,
         allowNull: false,
     },

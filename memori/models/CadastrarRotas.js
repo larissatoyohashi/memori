@@ -2,27 +2,27 @@ import Sequelize from "sequelize";
 import connection from "../config/sequelize-config.js";
 
 const CadastrarRotas = connection.define('CadastrarRotas',{
-    titulo_rota:{
+    tituloRota:{
         type: Sequelize.STRING,
         allowNull: false,
     },
-    cidade_localizada:{
+    cidadeLocalizada:{
         type: Sequelize.STRING,
         allowNull: false,
     },
-    longitute_rota:{
+    longituteRota:{
         type: Sequelize.FLOAT,
         allowNull: false, 
     },
-    latitude_rota:{
+    latitudeRota:{
         type: Sequelize.FLOAT,
         allowNull: false,
     },
-    imagem_capa:{
+    imagemCapa:{
         type: Sequelize.STRING,
         allowNull: false,
     },
-    descricao_rota:{
+    descricaoRota:{
         type: Sequelize.STRING,
         allowNull: false,
     }

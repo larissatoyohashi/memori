@@ -2,26 +2,26 @@ import Sequelize from "sequelize";
 import connection from "../config/sequelize-config.js";
 
 const Checkpoints = connection.define('checkpoints',{
-    nome_checkpoint:{
+    nomeCheckpoint:{
         type: Sequelize.STRING,
         allowNull: false,
     },
-    latitude_checkpoint:{
+    latitudeCheckpoint:{
         type: Sequelize.FLOAT,
         allowNull: false, 
     },
-    longitude_checkpoint:{
+    longitudeCheckpoint:{
         type: Sequelize.FLOAT,
         allowNull: false,
     },
-    titulo_rota:{
-        type: Sequelize.INTEGER,
+    tituloRota:{
+        type: Sequelize.STRING,
         allowNull: false,
     },
-    descricao_checkpoint:{
+    descricaoCheckpoint:{
         type: Sequelize.TEXT,
         allowNull: false,
     } 
-})
+});
 Checkpoints.sync({forse:false});
 export default Checkpoints;

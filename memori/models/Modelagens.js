@@ -2,19 +2,19 @@ import Sequelize from "sequelize";
 import connection from "../config/sequelize-config.js";
 
 const Modelagens = connection.define('Modelagens',{
-    nome_modelagem:{
+    nomeModelagem:{
         type: Sequelize.STRING,
         allowNull: false,
     },
-    nome_cidade:{
+    nomeCidade:{
         type: Sequelize.STRING,
         allowNull: false,
     },
-    nome_checkpoint:{
+    nomeCheckpoint:{
         type: Sequelize.STRING,
         allowNull: false,
     },
-    arquivo_modelagem:{
+    arquivoModelagem:{
         type: Sequelize.STRING,
         allowNull: false, 
     },
