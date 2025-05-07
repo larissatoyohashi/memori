@@ -492,7 +492,10 @@ select{
           font-family: Louis George Cafe;
         }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9713769077628d80b5534853facf40d9fa18ba79
     .btn-arquivo{
     border: none;
     color: #111;
@@ -503,6 +506,7 @@ select{
     font-size: 15px;
     border-radius: 12px;
     font-family: Louis George Cafe;
+<<<<<<< HEAD
     }
 
 
@@ -543,3 +547,6 @@ select{
       font-family: Louis George Cafe;
     }
 
+=======
+    }
+>>>>>>> 9713769077628d80b5534853facf40d9fa18ba79
