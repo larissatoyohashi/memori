@@ -1,7 +1,10 @@
 <%- include ('partials/header.ejs') %>
 <%- include ('partials/navbar.ejs') %>
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> ced5bc5 (@samsesz)
 <div class="container-formulario">
     <h3> Registro de Usuários </h3>
     <hr>
@@ -9,7 +12,11 @@
     <div class="cadastrar">
         <h4> Cadastrar novo Usuário </h4>
         <hr>
+<<<<<<< HEAD
         <form action="/clientes/new" method="POST">
+=======
+        <form action="/usuarios/new" method="POST">
+>>>>>>> ced5bc5 (@samsesz)
             <div class="inserir-dados">
             <label> Nome:</label>
             <input type="text" name="nome" placeholder="Digite o nome completo" class="form-input" required>
@@ -43,7 +50,25 @@
             <th> Nome de usuário </th>
             <th> E-mail </th>
             <th> Permissões </th>
+<<<<<<< HEAD
           </thead>
+=======
+            <th style="text-align: center;" colspan="2">Ações:</th>
+          </thead>
+          <tbody>
+            <% usuarios.forEach(usuario => { %>
+            <tr>
+                <td><%= usuario.nome %></td>
+                <td><%= usuario.nomeUsuario %></td>
+                <td><%= usuario.emailUsuario %></td>
+                <td><%= usuario.senhaUsuario %></td>
+                <td><%= usuario.permissao %></td>
+                <td><a style="color: orange;" href="/usuarios/edit/<%= usuario.nomeUsuario %>">Editar</a></td>
+                <td><a style="color: red;" href="/usuarios/delete/<%= usuario.nomeUsuario %>">Excluir</a></td>
+            </tr>
+            <% }) %>
+          </tbody>
+>>>>>>> ced5bc5 (@samsesz)
             <tr>
                 <td>a</td>
                 <td>Larissa</td>
