@@ -1,3 +1,4 @@
+
 import express from "express"
 
 // Carregando o método do Express para gerenciamento de Rotas
@@ -77,3 +78,4 @@ router.get("/rotas", (req, res) => {
   
   // Exportando o módulo ProdutosController.js
   export default router;
+
