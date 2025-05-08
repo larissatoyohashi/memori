@@ -7,7 +7,7 @@
 ## Feramentas
  
 Ferramentas utilizadas para a crição do sistema: 
-* [![JavaScript][Javascript]][Javascript-url] 
+* [![JavaScript]<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />       
 * [![Bootstrap][Bootstrap.com]][Bootstrap-url]
 * [![MySql][Mysql]][Mysql-url]
 * [![HeideSql][Heidesql]][Heidesql-url]
