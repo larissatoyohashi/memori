@@ -1,0 +1,60 @@
+<div class="wrapper">
+    <div class="cadastrar">
+        <h4> Cadastrar Quiz </h4>
+        <hr>
+        <form action="/quizzes/update/<%= quizz.id %>" method="POST">
+            <div class="inserir-dados">
+            <label> Nome do Quiz</label>
+            <input type="text" name="nome-quiz" value="<%= quizz.pergunta %>" class="form-input" required>
+            <br>
+
+            <label> Checkpoint: </label>
+            <select name="checkpoint-quiz" value="<%= quizz.alternativaA %>">
+                <option value="#">Galpão do KKKK</option>
+              </select> 
+              <br>
+
+              <label> Alternativa A</label>
+              <input type="text" name="alternativa-A" value="<%= quizz.alternativaA %>" class="form-input" required>
+              <br>
+
+              <label> Alternativa B</label>
+              <input type="text" name="alternativa-A" value="<%= quizz.alternativaB %>" class="form-input" required>
+              <br>
+
+              <label> Alternativa C</label>
+              <input type="text" name="alternativa-C" value="<%= quizz.alternativaC %>" class="form-input" required>
+              <br>
+
+              <label> Alternativa D</label>
+              <input type="text" name="alternativa-D" value="<%= quizz.alternativaD %>" class="form-input" required>
+              <br>
+
+              <label> Alternativa E</label>
+              <input type="text" name="alternativa-E" value="<%= quizz.alternativaE %>" class="form-input" required>
+              <br>
+
+              <label> Alternativa correta: </label>
+            <select name="alternativa-correta" value="<%= quizz.alternativaCorreta %>">
+                <option value="#">A</option>
+                <option value="#">B</option>
+                <option value="#">C</option>
+                <option value="#">D</option>
+                <option value="#">E</option>
+              </select> 
+              <br>
+
+              <label>Vídeo explicativo: </label>
+              <div class="cadastro-arquivo" method="post" enctype="multipart/form-data">
+                      <input type="file" name="upload-video-quiz" class="btn-arquivo"  required>    
+              </div>
+
+            <div class="div-botao">
+                <button name="cadastrar-checkpoint" class="button-cadastro"> Cadastrar </button>
+            </div>
+            <input type="hidden" name="id" value="<%= quizz.id %>">
+            <input type="submit" class="btn btn-warning" value="Alterar" onclick="return confirm (`Confirme as alterações
+            realizadas para a <%= quizz.pergunta %>`)">
+            </div>
+        </form>
+    </div>

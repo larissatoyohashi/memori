@@ -17,6 +17,7 @@ router.get("/rotas", (req, res) => {
 
   // Cadastrando dados das rotas
   router.post("/rotas/new", (req,res) => {
+    const id = req.body.id
     const tituloRota = req.body.tituloRota
     const cidadeLocalizada = req.body.cidadeLocalizada
     const longitudeRota = req.body.longitudeRota
@@ -24,6 +25,7 @@ router.get("/rotas", (req, res) => {
     const imagemCapa = req.body.imagemCapa
     const descricaoRota = req.body.descricaoRota
     CadastrarRotas.create({
+      id : id,
       tituloRota : tituloRota,
       cidadeLocalizada : cidadeLocalizada,
       longitudeRota : longitudeRota,
@@ -57,6 +59,7 @@ router.get("/rotas", (req, res) => {
   })
   // Rota de alteração de rotas
   router.post("/rotas/update/:id", (req,res) => {
+    const id = req.body.id
     const tituloRota = req.body.tituloRota
     const cidadeLocalizada = req.body.cidadeLocalizada
     const longitudeRota = req.body.longitudeRota
@@ -65,6 +68,7 @@ router.get("/rotas", (req, res) => {
     const descricaoRota = req.body.descricaoRota
     CadastrarRotas.update(
       {
+        id : id,
         tituloRota : tituloRota,
         cidadeLocalizada : cidadeLocalizada,
         longitudeRota : longitudeRota,

@@ -21,7 +21,11 @@ const Checkpoints = connection.define('checkpoints',{
     descricaoCheckpoint:{
         type: Sequelize.TEXT,
         allowNull: false,
-    } 
+    },
+    imagemCheckpoint:{
+        type: Sequelize.STRING,
+        allowNull: false,
+    }
 });
 Checkpoints.sync({forse:false});
 export default Checkpoints;

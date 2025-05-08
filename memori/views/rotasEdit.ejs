@@ -5,26 +5,26 @@
     <div class="cadastrar">
         <h4> Cadastrar nova Rota </h4>
         <hr>
-        <form action="/rotas/new" method="POST">
+        <form action="/rotas/update/<%= rota.id %>" method="POST">
             <div class="inserir-dados">
             <label> Titulo do Percurso:</label>
-            <input type="text" name="titulo-percurso" placeholder="Digite o titulo do percurso" class="form-input" required>
+            <input type="text" name="titulo-percurso" value="<%= rota.tituloRota %>" class="form-input" required>
             <br>
             <label> Cidade localizada:</label>
-            <select name="cidades" id="cidades">
+            <select name="cidades" value="<%= rota.cidadeLocalizada %>">
                 <option value="Registro">Registro</option>
               </select> 
               <br>
             <label> Longitude:</label>
-            <input type="text" name="longitude-inicio" placeholder="Digite a longitude" class="form-input" required>
+            <input type="text" name="longitude-inicio" value="<%= rota.longitudeRota %>" class="form-input" required>
             <label>Latitude:</label>
-            <input type="text" name="latitude-inicio" placeholder="Digite a latitude" class="form-input" required>
+            <input type="text" name="latitude-inicio" value="<%= rota.latitudeRota %>" class="form-input" required>
             <br><br>
 
             <label>Imagem de capa:</label>
             <div class="cadastro-arquivo" method="post" enctype="multipart/form-data">
                 <form action="/upload-capa">
-                    <input type="file" name="upload-capa" class="btn-arquivo" required>    
+                    <input type="file" name="imagemCapa" value="<%= rota.imagemCapa %>" class="btn-arquivo" required>    
                 </form>
             </div>
 
@@ -34,7 +34,7 @@
             <br>
             <input type="hidden" name="id" value="<%= checkpoint.id %>">
             <input type="submit" class="btn btn-warning" value="Alterar" onclick="return confirm (`Confirme as alterações
-            realizadas para o usuario <%= checkpoint.nomeCheckpoint %>?`)">
+            realizadas para o usuario <%= rota.tituloRota %>`)">
             </div>
         </form>
     </div>

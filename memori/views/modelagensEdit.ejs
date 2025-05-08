@@ -1,0 +1,40 @@
+<div class="wrapper">
+    <div class="cadastrar">
+        <h4> Cadastrar Modelagem </h4>
+        <hr>
+        <form action="/modelagem/update/<%= modelagem.id %>" method="POST">
+            <div class="inserir-dados">
+            <label> Nome da Modelagem:</label>
+            <input type="text" name="nome-modelagem" value="<%= modelagem.nomeModelagem %>" class="form-input" required>
+            <br>
+
+            <label> Cidade: </label>
+            <select name="cidade-modelagem" value="<%= modelagem.nomeCidade %>">
+                <option value="#">Registro</option>
+              </select> 
+              <br>
+
+            <label> Checkpoint: </label>
+            <select name="checkpoint-modelagem" value="<%= modelagem.nomeCheckpoint %>">
+                <option value="#">Galpão do KKKK</option>
+              </select> 
+              <br>
+
+             
+              <label>Arquivo da Modelagem: </label>
+              <div class="cadastro-arquivo" method="post" enctype="multipart/form-data">
+                  <form action="/upload-modelagem" >
+                      <input type="file" name="upload-modelagem" value="<%= modelagem.arquivoModelagem %>" class="btn-arquivo"  required>    
+                  </form>
+              </div>
+
+            <br><br>
+            <div class="div-botao">
+                <button name="cadastrar-checkpoint" class="button-cadastro"> Cadastrar </button>
+            </div>
+            <input type="hidden" name="id" value="<%= modelagem.id %>">
+            <input type="submit" class="btn btn-warning" value="Alterar" onclick="return confirm (`Confirme as alterações
+            realizadas para a modelagem <%= modelagem.nomeModelagem %>`)">
+            </div>
+        </form>
+    </div>

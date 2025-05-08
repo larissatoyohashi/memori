@@ -12,29 +12,29 @@
         <form action="/checkpoints/new" method="POST">
             <div class="inserir-dados">
             <label> Nome do Checkpoint:</label>
-            <input type="text" name="nome-checkpoint" placeholder="Digite nome do checkpoint" class="form-input" required>
+            <input type="text" name="nomeCheckpoint" value="<%= checkpoint.nomeCheckpoint %>" class="form-input" required>
             <br>
 
             <label> Descrição do Checkpoint:</label>
-            <textarea id="descricao-checkpoint" name="descricao-checkpoint" class="form-input" placeholder="Digite nome do checkpoint">
+            <textarea id="descricao-checkpoint" name="descricaoCheckpoint" value="<%= checkpoint.descricaoCheckpoint" class="form-input">
             </textarea>
 
             <br>
             <label> Rota do Checkpoint: </label>
-            <select name="rota-checkpoint" id="rota-checkpoint">
+            <select name="rota-checkpoint" value="<%= checkpoint.tituloRota %>">
                 <option value="#">KKKK</option>
               </select> 
               <br>
 
             <label> Longitude do Checkpoint:</label>
-            <input type="text" name="longitude-checkpoint" placeholder="Digite a longitude" class="form-input" required>
+            <input type="text" name="longitude-checkpoint" value="<%= checkpoint.longitudeCheckpoint %>" class="form-input" required>
             <label>Latitude do Checkpoint:</label>
-            <input type="text" name="latitude-checkpoint" placeholder="Digite a latitude" class="form-input" required>
+            <input type="text" name="latitude-checkpoint" value="<%= checkpoint.latitudeCheckpoint %>" class="form-input" required>
             
             <label>Imagem do Checkpoint:</label>
             <div class="cadastro-arquivo" method="post" enctype="multipart/form-data">
                 <form action="/upload-foto-checkpoint">
-                    <input type="file" name="upload-capa" class="btn-arquivo" required>    
+                    <input type="file" name="upload-capa" value="<%= imagemCheckpoint %>" class="btn-arquivo" required>    
                 </form>
             </div>
             
@@ -88,17 +88,17 @@
         <form action="/modelagem/new" method="POST">
             <div class="inserir-dados">
             <label> Nome da Modelagem:</label>
-            <input type="text" name="nome-modelagem" placeholder="Digite nome do checkpoint" class="form-input" required>
+            <input type="text" name="nome-modelagem" value="<%= modelagem.nomeModelagem %>" class="form-input" required>
             <br>
 
             <label> Cidade: </label>
-            <select name="cidade-modelagem" id="cidade-modelagem">
+            <select name="cidade-modelagem" value="<%= modelagem.nomeCidade %>">
                 <option value="#">Registro</option>
               </select> 
               <br>
 
             <label> Checkpoint: </label>
-            <select name="checkpoint-modelagem" id="checkpoint-modelagem">
+            <select name="checkpoint-modelagem" value="<%= modelagem.nomeCheckpoint %>">
                 <option value="#">Galpão do KKKK</option>
               </select> 
               <br>
@@ -107,7 +107,7 @@
               <label>Arquivo da Modelagem: </label>
               <div class="cadastro-arquivo" method="post" enctype="multipart/form-data">
                   <form action="/upload-modelagem" >
-                      <input type="file" name="upload-modelagem" class="btn-arquivo"  required>    
+                      <input type="file" name="upload-modelagem" value="<%= modelagem.arquivoModelagem %>" class="btn-arquivo"  required>    
                   </form>
               </div>
 
@@ -138,8 +138,8 @@
                     <td><%= modelagen.nomeCidade %></td>
                     <td><%= modelagen.nomeCheckpoint %></td>
                     <td><%= modelagen.arquivoModelagem %></td>
-                    <td><a style="color: orange;" href="/modelagens/edit/<%= modelagen.nomeModelagem %>">Editar</a></td>
-                    <td><a style="color: red;" href="/modelagens/delete/<%= modelagen.nomeModelagem %>">Excluir</a></td>
+                    <td><a style="color: orange;" href="/modelagens/edit/<%= modelagem.nomeModelagem %>">Editar</a></td>
+                    <td><a style="color: red;" href="/modelagens/delete/<%= modelagem.nomeModelagem %>">Excluir</a></td>
                 </tr>
                 <% }) %>
               </tbody>
@@ -154,40 +154,40 @@
     <div class="cadastrar">
         <h4> Cadastrar Quiz </h4>
         <hr>
-        <form action="/modelagem/new" method="POST">
+        <form action="/quizzes/new" method="POST">
             <div class="inserir-dados">
             <label> Nome do Quiz</label>
-            <input type="text" name="nome-quiz" placeholder="Digite nome do quiz" class="form-input" required>
+            <input type="text" name="nome-quiz" value="<%= quizz.pergunta %>" class="form-input" required>
             <br>
 
             <label> Checkpoint: </label>
-            <select name="checkpoint-quiz" id="checkpoint-quiz">
+            <select name="checkpoint-quiz" value="<%= quizz.alternativaA %>">
                 <option value="#">Galpão do KKKK</option>
               </select> 
               <br>
 
               <label> Alternativa A</label>
-              <input type="text" name="alternativa-A" placeholder="Digite a primeira alternativa" class="form-input" required>
+              <input type="text" name="alternativa-A" value="<%= quizz.alternativaA %>" class="form-input" required>
               <br>
 
               <label> Alternativa B</label>
-              <input type="text" name="alternativa-A" placeholder="Digite a segunda alternativa" class="form-input" required>
+              <input type="text" name="alternativa-A" value="<%= quizz.alternativaB %>" class="form-input" required>
               <br>
 
               <label> Alternativa C</label>
-              <input type="text" name="alternativa-C" placeholder="Digite a terceira alternativa" class="form-input" required>
+              <input type="text" name="alternativa-C" value="<%= quizz.alternativaC %>" class="form-input" required>
               <br>
 
               <label> Alternativa D</label>
-              <input type="text" name="alternativa-D" placeholder="Digite a quarta alternativa" class="form-input" required>
+              <input type="text" name="alternativa-D" value="<%= quizz.alternativaD %>" class="form-input" required>
               <br>
 
               <label> Alternativa E</label>
-              <input type="text" name="alternativa-E" placeholder="Digite a quinta alternativa" class="form-input" required>
+              <input type="text" name="alternativa-E" value="<%= quizz.alternativaE %>" class="form-input" required>
               <br>
 
               <label> Alternativa correta: </label>
-            <select name="alternativa-correta" id="alternativa-correta">
+            <select name="alternativa-correta" value="<%= quizz.alternativaCorreta %>">
                 <option value="#">A</option>
                 <option value="#">B</option>
                 <option value="#">C</option>
@@ -209,7 +209,7 @@
     </div>
 
         <div class="consultar">
-            <h4> Consultar Modelagem </h4>
+            <h4> Consultar Quiz </h4>
             <div class= "pesquisa">
             </div>
             <table>
@@ -234,6 +234,7 @@
                     <td><%= quizz.alternativaC %></td>
                     <td><%= quizz.alternativaD %></td>
                     <td><%= quizz.alternativaE %></td>
+                    <td><%= quizz.alternativaCorreta %></td>
                     <td><a style="color: orange;" href="/quizzes/edit/<%= quizz.pergunta %>">Editar</a></td>
                     <td><a style="color: red;" href="/quizzes/delete/<%= quizz.pergunta %>">Excluir</a></td>
                 </tr>

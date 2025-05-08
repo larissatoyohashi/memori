@@ -9,7 +9,7 @@
     <div class="cadastrar">
         <h4> Cadastrar nova Rota </h4>
         <hr>
-        <form action="/rotas/new" method="POST">
+        <form action="/rotas/update/<%= rota.id %>" method="POST">
             <div class="inserir-dados">
             <label> Titulo da Rota:</label>
             <input type="text" name="titulo-rota" placeholder="Digite o titulo do percurso" class="form-input" required>
