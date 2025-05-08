@@ -26,6 +26,11 @@ const Quizzes = connection.define('Quizzes',{
         type: Sequelize.STRING,
         allowNull: false,
     },
+
+    alternativaCorreta: {
+        type: Sequelize.STRING,
+        allowNull: false,
+        }
 })
 Quizzes.sync({forse:false});
 export default Quizzes;

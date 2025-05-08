@@ -8,30 +8,29 @@
     <div class="cadastrar">
         <h4> Cadastrar novo Usuário </h4>
         <hr>
-        <form action="/clientes/new" method="POST">
+        <form action="/usuarios/update/<%= usuario.id %>" method="POST">
             <div class="inserir-dados">
             <label> Nome:</label>
-            <input type="text" name="nome" placeholder="Digite o nome completo" class="form-input" required>
+            <input type="text" name="nome"  values="<%= usuario.nome %>" class="form-input" required>
             <label> Nome de usuário:</label>
-            <input type="text" name="username" placeholder="Digite o nome de usuário" class="form-input" required>
+            <input type="text" name="nomeUsuario" values="<%= usuario.nomeUsuario %>"  class="form-input" required>
             <label> E-mail:</label>
-            <input type="email" name="email" placeholder="Digite o e-mail" class="form-input" required>
+            <input type="email" name="emailUsuario" values="<%= usuario.emailUsuario %>" class="form-input" required>
             <label>Senha:</label>
-            <input type="password" name="senha" placeholder="Digite a senha" class="form-input" required>
+            <input type="password" name="senhaUsuario" values="<%= usuario.senhaUsuario %>" class="form-input" required>
             <br><br>
             <hr>
             <label> Permissões:</label><br>
-            <input type="checkbox" name="permissao-editor">
-            <label for="permissao-editor" class="texto-checkbox"> Editor</label>
-            <input type="checkbox" name="permissao-leitor" > 
-            <label for="permissao-leitor" class="texto-checkbox"> Leitor</label>
+            <input type="checkbox" name="permissao">
+            <label for="permissao" class="texto-checkbox"> Editor</label>
+            <input type="checkbox" name="permissao" > 
+            <label for="permissao" class="texto-checkbox"> Leitor</label>
             <div class="div-botao">
-                <button name="cadastrar-usuario" class="button-cadastro"> Cadastrar </button>
-            </div>
-            <br>
-            <input type="hidden" name="id" value="<%= usuario.id %>">
-            <input type="submit" class="btn btn-warning" value="Alterar" onclick="return confirm (`Confirme as alterações
+                <input type="hidden" name="id" value="<%= usuario.id %>">
+            <input type="submit" class="button-cadastro" value="Alterar" onclick="return confirm (`Confirme as alterações
             realizadas para o usuario <%= usuario.nomeUsuario %>?`)">
+            </div>
+           
             </div>
         </form>
     </div>

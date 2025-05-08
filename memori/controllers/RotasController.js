@@ -1,17 +1,19 @@
 
 import express from "express"
+import CadastrarRotas from "../models/CadastrarRotas.js";
 
 // Carregando o método do Express para gerenciamento de Rotas
 const router = express.Router(); // Método para gerenciar a rota
 
 //ROTA DE PRODUTOS
 router.get("/rotas", (req, res) => {
-    // Coletando o parâmetrop da rota
+  CadastrarRotas.findAll().then((rotas) => {
     res.render("rotas", {
       // Enviando a variável produto para a página
-      rotas : rotas,
+      rotas: rotas,
     });
   });
+});
 
   // Cadastrando dados das rotas
   router.post("/rotas/new", (req,res) => {
@@ -21,7 +23,7 @@ router.get("/rotas", (req, res) => {
     const lantitudeRota = req.body.lantitudeRota
     const imagemCapa = req.body.imagemCapa
     const descricaoRota = req.body.descricaoRota
-    Rota.create({
+    CadastrarRotas.create({
       tituloRota : tituloRota,
       cidadeLocalizada : cidadeLocalizada,
       longitudeRota : longitudeRota,
@@ -35,7 +37,7 @@ router.get("/rotas", (req, res) => {
   // Excluindo dados das rotas
   router.get("/rotas/delete/:id", (req,res) => {
     const id = req.params.id
-    rotas.destroy ({
+    CadastrarRotas.destroy ({
       where: {
         id : id
       }
@@ -47,7 +49,7 @@ router.get("/rotas", (req, res) => {
   // Rotas de edição das rotas
   router.get("/rotas/edit/:id", (req,res) => {
     const id = req.params.id
-    Rota.findByPk(id).then(function(rota) {
+    CadastrarRotas.findByPk(id).then(function(rota) {
       res.render("rotaEdit", {
         rota : rota
       })
@@ -61,7 +63,7 @@ router.get("/rotas", (req, res) => {
     const lantitudeRota = req.body.lantitudeRota
     const imagemCapa = req.body.imagemCapa
     const descricaoRota = req.body.descricaoRota
-    Rota.update(
+    CadastrarRotas.update(
       {
         tituloRota : tituloRota,
         cidadeLocalizada : cidadeLocalizada,

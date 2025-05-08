@@ -1,10 +1,6 @@
 <%- include ('partials/header.ejs') %>
 <%- include ('partials/navbar.ejs') %>
 
-<<<<<<< HEAD
-
-=======
->>>>>>> ced5bc5 (@samsesz)
 <div class="container-formulario">
     <h3> Registro de Usuários </h3>
     <hr>
@@ -12,29 +8,25 @@
     <div class="cadastrar">
         <h4> Cadastrar novo Usuário </h4>
         <hr>
-<<<<<<< HEAD
-        <form action="/clientes/new" method="POST">
-=======
         <form action="/usuarios/new" method="POST">
->>>>>>> ced5bc5 (@samsesz)
             <div class="inserir-dados">
             <label> Nome:</label>
-            <input type="text" name="nome" placeholder="Digite o nome completo" class="form-input" required>
+            <input type="text" name="nome" placeholder="Digite o nome completo" class="form-input" id="nome" required>
             <label> Nome de usuário:</label>
-            <input type="text" name="username" placeholder="Digite o nome de usuário" class="form-input" required>
+            <input type="text" name="nomeUsuario" placeholder="Digite o nome de usuário" class="form-input" id="nomeUsuario" required>
             <label> E-mail:</label>
-            <input type="email" name="email" placeholder="Digite o e-mail" class="form-input" required>
+            <input type="email" name="emailUsuario" placeholder="Digite o e-mail" class="form-input" id="emailUsuario" required>
             <label>Senha:</label>
-            <input type="password" name="senha" placeholder="Digite a senha" class="form-input" required>
+            <input type="password" name="senhaUsuario" placeholder="Digite a senha" class="form-input" id="senhaUsuario" required>
             <br><br>
             <hr>
             <label> Permissões:</label><br>
-            <input type="checkbox" name="permissao-editor">
-            <label for="permissao-editor" class="texto-checkbox"> Editor</label>
-            <input type="checkbox" name="permissao-leitor" > 
-            <label for="permissao-leitor" class="texto-checkbox"> Leitor</label>
+            <input type="checkbox" name="permissao" id="permissao" value="editor">
+            <label for="permissao" class="texto-checkbox"> Editor</label>
+            <input type="checkbox" name="permissao" id="permissao" value="leitor"> 
+            <label for="permissao" class="texto-checkbox"> Leitor</label>
             <div class="div-botao">
-                <button name="cadastrar-usuario" class="button-cadastro"> Cadastrar </button>
+                <button name="cadastrar-usuario" class="button-cadastro" id="cadastrarUsuario" type="submit"> Cadastrar </button>
             </div>
             </div>
         </form>
@@ -50,31 +42,15 @@
             <th> Nome de usuário </th>
             <th> E-mail </th>
             <th> Permissões </th>
-<<<<<<< HEAD
-          </thead>
-=======
             <th style="text-align: center;" colspan="2">Ações:</th>
           </thead>
           <tbody>
-            <% usuarios.forEach(usuario => { %>
             <tr>
-                <td><%= usuario.nome %></td>
-                <td><%= usuario.nomeUsuario %></td>
-                <td><%= usuario.emailUsuario %></td>
-                <td><%= usuario.senhaUsuario %></td>
-                <td><%= usuario.permissao %></td>
-                <td><a style="color: orange;" href="/usuarios/edit/<%= usuario.nomeUsuario %>">Editar</a></td>
-                <td><a style="color: red;" href="/usuarios/delete/<%= usuario.nomeUsuario %>">Excluir</a></td>
-            </tr>
-            <% }) %>
-          </tbody>
->>>>>>> ced5bc5 (@samsesz)
-            <tr>
-                <td>a</td>
+                <td>1</td>
                 <td>Larissa</td>
                 <td>ltoyohashi</td>
                 <td>ltoyohashi@gmail.com</td>
-                <td>e</td>
+                <td>1</td>
                 <td>
                     <Button name="editar-usuario" class="btn-editar"> <i class = "fas fa-pencil"></i></Button>
                 </td>
@@ -82,6 +58,21 @@
                     <Button name="excluir-usuario" class="btn-excluir"> <i class = "fas fa-cancel"></i></Button>
                 </td>
             </tr>
+            
+            <% usuarios.forEach(usuario => { %>
+            <tr>
+                <td><%= usuario.id %></td>
+                <td><%= usuario.nome %></td>
+                <td><%= usuario.nomeUsuario %></td>
+                <td><%= usuario.emailUsuario %></td>
+                <td><%= usuario.permissao %></td>
+                
+                <td><a href="/usuarios/edit/<%= usuario.id %>"> <Button name="editar-usuario" class="btn-editar"> <i class = "fas fa-pencil"></i></Button></a></td>
+                <td><a href="/usuarios/delete/<%= usuario.id %>"><Button name="excluir-usuario" class="btn-excluir"> <i class = "fas fa-cancel"></i></Button></a></td>
+            </tr>
+            <% }) %>
+          </tbody>
+            
             
         </table>
     </div>
