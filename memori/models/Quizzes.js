@@ -6,6 +6,10 @@ const Quizzes = connection.define('Quizzes',{
         type: Sequelize.STRING,
         allowNull: false,
     },
+    checkpointQuizz:{
+        type: Sequelize.STRING,
+        allowNull: false,
+    },
     alternativaA:{
         type: Sequelize.STRING,
         allowNull: false, 
@@ -26,11 +30,10 @@ const Quizzes = connection.define('Quizzes',{
         type: Sequelize.STRING,
         allowNull: false,
     },
-
     alternativaCorreta: {
         type: Sequelize.STRING,
         allowNull: false,
-        }
+    }
 })
-Quizzes.sync({forse:false});
+Quizzes.sync({ force: true });
 export default Quizzes;

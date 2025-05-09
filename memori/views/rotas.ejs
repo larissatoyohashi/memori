@@ -9,7 +9,7 @@
     <div class="cadastrar">
         <h4> Cadastrar nova Rota </h4>
         <hr>
-        <form action="/rotas/update/<%= rota.id %>" method="POST">
+        <form action="/rotas/new" method="POST">
             <div class="inserir-dados">
             <label> Titulo da Rota:</label>
             <input type="text" name="titulo-rota" placeholder="Digite o titulo do percurso" class="form-input" required>
@@ -24,16 +24,11 @@
             <label>Latitude:</label>
             <input type="text" name="latitude-inicio" placeholder="Digite a latitude" class="form-input" required>
             <label>Imagem de capa:</label>
-            <input type="text" name="latitude-inicio" placeholder="Digite a latitude" class="form-input" required>
-            <br><br>
-
-            <label>Imagem de capa:</label>
             <div class="cadastro-arquivo" method="post" enctype="multipart/form-data">
                 <form action="/upload-capa">
                     <input type="file" name="upload-capa" class="btn-arquivo" required>    
                 </form>
             </div>
-
             <div class="div-botao">
                 <button name="cadastrar-rota" class="button-cadastro"> Cadastrar </button>
             </div>
@@ -61,13 +56,7 @@
                     <td>xxxxxxxxxx</td>
                     <td>yyyyyyyyyy</td>
                     <td><img src="#" height="20px"></td>
-<<<<<<< HEAD
-<<<<<<< HEAD
                     <td><img src="#" height="20px"></td>
-=======
->>>>>>> 9713769077628d80b5534853facf40d9fa18ba79
-=======
->>>>>>> 9713769077628d80b5534853facf40d9fa18ba79
                     <td>
                         <Button name="editar-rota" class="btn-editar" id="editar-rota"> <i class = "fas fa-pencil"></i>
                         </Button>

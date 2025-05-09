@@ -1,0 +1,103 @@
+<%- include ('partials/header.ejs') %>
+<%- include ('partials/navbar.ejs') %>
+
+<div class="wrapper">
+    <div class="cadastrar">
+        <h4> Cadastrar Quiz </h4>
+        <hr>
+        <form action="/quizzes/new" method="POST">
+            <div class="inserir-dados">
+            <label> Nome do Quiz</label>
+            <input type="text" name="pergunta" class="form-input" required>
+            <br>
+
+            <label> Checkpoint: </label>
+            <select name="checkpointQuizz">
+                <option value="Galpão do KKKK">Galpão do KKKK</option>
+                <option value="Europa">Europa</option>
+              </select> 
+              <br>
+
+              <label> Alternativa A</label>
+              <input type="text" name="alternativaA" class="form-input" required>
+              <br>
+
+              <label> Alternativa B</label>
+              <input type="text" name="alternativaB" class="form-input" required>
+              <br>
+
+              <label> Alternativa C</label>
+              <input type="text" name="alternativaC" class="form-input" required>
+              <br>
+
+              <label> Alternativa D</label>
+              <input type="text" name="alternativaD" class="form-input" required>
+              <br>
+
+              <label> Alternativa E</label>
+              <input type="text" name="alternativaE" class="form-input" required>
+              <br>
+
+              <label> Alternativa correta: </label>
+            <select name="alternativaCorreta">
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+                <option value="D">D</option>
+                <option value="E">E</option>
+              </select> 
+              <br>
+
+              <label>Vídeo explicativo: </label>
+              <div class="cadastro-arquivo" method="post" enctype="multipart/form-data">
+                      <input type="file" name="upload-video-quiz" class="btn-arquivo"  required>    
+              </div>
+
+            <div class="div-botao">
+                <button name="cadastrar-checkpoint" class="button-cadastro"> Cadastrar </button>
+            </div>
+            </div>
+        </form>
+    </div>
+
+        <div class="consultar">
+            <h4> Consultar Quiz </h4>
+            <div class= "pesquisa">
+            </div>
+            <table>
+              <thead>
+                <th> Id </th>
+                <th> Nome do Quiz </th>
+                <th> Checkpoint </th>
+                <th> Alternativa A </th>
+                <th> Alternativa B </th>
+                <th> Alternativa C </th>
+                <th> Alternativa D </th>
+                <th> Alternativa E </th>
+                <th> Alternativa Correta </th>
+              </thead>
+
+              <tbody>
+                <% quizzes.forEach(quizzes => { %>
+                <tr>
+                    <td><%= quizzes.id %></td>
+                    <td><%= quizzes.pergunta %></td>
+                    <td><%= quizzes.checkpointQuizz %></td>
+                    <td><%= quizzes.alternativaA %></td>
+                    <td><%= quizzes.alternativaB %></td>
+                    <td><%= quizzes.alternativaC %></td>
+                    <td><%= quizzes.alternativaD %></td>
+                    <td><%= quizzes.alternativaE %></td>
+                    <td><%= quizzes.alternativaCorreta %></td>
+                    
+                    <td><a href="/quizzes/edit/<%= quizzes.id %>"> <Button name="editar-usuario" class="btn-editar"> <i class = "fas fa-pencil"></i></Button></a></td>
+                    <td><a href="/quizzes/delete/<%= quizzes.id %>"><Button name="excluir-usuario" class="btn-excluir"> <i class = "fas fa-cancel"></i></Button></a></td>
+                </tr>
+                <% }) %>
+              </tbody>
+            </table>
+    </div>
+</div>
+</div>
+
+<%- include ('partials/footer.ejs') %>

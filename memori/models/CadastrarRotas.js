@@ -27,5 +27,5 @@ const CadastrarRotas = connection.define('CadastrarRotas',{
         allowNull: false,
     }
 })
-CadastrarRotas.sync({forse:false});
+CadastrarRotas.sync({force:true});
 export default CadastrarRotas;

@@ -5,16 +5,17 @@ const app = express();
 // Importando os Controllers (onde estão as rotas)
 import RotasController from "./controllers/RotasController.js";
 import UsuariosController from "./controllers/UsuariosController.js";
-import EstatisticasController from "./controllers/EstatisticasController.js";
 import CheckpointsController from "./controllers/CheckpointsController.js";
+import ModelagensController from "./controllers/ModelagensController.js";
+import QuizzesController from "./controllers/QuizzesController.js";
 
 import connection from "./config/sequelize-config.js";
 
-// import CadastrarRotas from "./models/CadastrarRotas.js";
-// import Checkpoints from "./models/Checkpoints.js";
-// import Modelagens from "./models/Modelagens.js";
-// import Quizzes from "./models/Quizzes.js";
-// import Usuarios from "./models/Usuarios.js";
+import CadastrarRotas from "./models/CadastrarRotas.js";
+import Checkpoints from "./models/Checkpoints.js";
+import Modelagens from "./models/Modelagens.js";
+import Quizzes from "./models/Quizzes.js";
+import Usuarios from "./models/Usuarios.js";
 
 connection.authenticate().then(() =>{
   console.log("Conexão com o banco de dados realizada com sucesso!");
@@ -41,8 +42,9 @@ app.use(express.static("public"));
 // Definindo o uso das rotas dos Controllers
 app.use("/", UsuariosController);
 app.use("/", RotasController);
-app.use("/", EstatisticasController);
 app.use("/", CheckpointsController);
+app.use("/", ModelagensController);
+app.use("/", QuizzesController);
 
 
 

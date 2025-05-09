@@ -1,0 +1,74 @@
+<%- include ('partials/header.ejs') %>
+<%- include ('partials/navbar.ejs') %>
+
+<div class="wrapper">
+    <div class="cadastrar">
+        <h4> Cadastrar Modelagem </h4>
+        <hr>
+        <form action="/modelagens/new" method="POST">
+            <div class="inserir-dados">
+            <label> Nome da Modelagem:</label>
+            <input type="text" name="nomeModelagens" class="form-input" required>
+            <br>
+
+            <label> Cidade: </label>
+            <select name="nomeCidade">
+                <option value="Registro">Registro</option>
+              </select> 
+              <br>
+
+            <label> Checkpoint: </label>
+            <select name="nomeCheckpoint">
+                <option value="Galpão do KKKK">Galpão do KKKK</option>
+              </select> 
+              <br>
+
+             
+              <label>Arquivo da Modelagem: </label>
+              <div class="cadastro-arquivo" method="post" enctype="multipart/form-data">
+                  <form action="/upload-modelagem" >
+                      <input type="file" name="arquivoModelagens" class="btn-arquivo"  required>    
+                  </form>
+              </div>
+
+            <br><br>
+            <div class="div-botao">
+                <button name="cadastrar-checkpoint" class="button-cadastro"> Cadastrar </button>
+            </div>
+            </div>
+        </form>
+    </div>
+
+        <div class="consultar">
+            <h4> Consultar Modelagem </h4>
+            <div class= "pesquisa">
+            </div>
+            <table>
+              <thead>
+                <th> Id </th>
+                <th> Nome da Modelagem </th>
+                <th> Checkpoint </th>
+                <th> Cidade </th>
+              </thead>
+
+              <tbody>
+                <% modelagens.forEach(modelagens => { %>
+                <tr>
+                    <td><%= modelagens.id %></td>
+                    <td><%= modelagens.nomeModelagens %></td>
+                    <td><%= modelagens.nomeCidade %></td>
+                    <td><%= modelagens.nomeCheckpoint %></td>
+                    <td><%= modelagens.arquivoModelagens %></td>
+                    <td><a href="/modelagens/edit/<%= modelagens.id %>"> <Button name="editar-usuario" class="btn-editar"> <i class = "fas fa-pencil"></i></Button></a></td>
+                    <td><a href="/modelagens/delete/<%= modelagens.id %>"><Button name="excluir-usuario" class="btn-excluir"> <i class = "fas fa-cancel"></i></Button></a></td>
+                </tr>
+                <% }) %>
+              </tbody>
+
+             
+                
+            </table>
+    </div>
+</div>
+
+<%- include ('partials/footer.ejs') %>

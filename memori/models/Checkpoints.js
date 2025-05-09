@@ -27,5 +27,5 @@ const Checkpoints = connection.define('checkpoints',{
         allowNull: false,
     }
 });
-Checkpoints.sync({forse:false});
+Checkpoints.sync({force:true});
 export default Checkpoints;

@@ -23,6 +23,6 @@ const Usuarios = connection.define('Usuarios',{
         allowNull: false,
     }
 })
-Usuarios.sync({forse:false});
+Usuarios.sync({force:true});
 
 export default Usuarios;

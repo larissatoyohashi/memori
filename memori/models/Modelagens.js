@@ -2,7 +2,7 @@ import Sequelize from "sequelize";
 import connection from "../config/sequelize-config.js";
 
 const Modelagens = connection.define('Modelagens',{
-    nomeModelagem:{
+    nomeModelagens:{
         type: Sequelize.STRING,
         allowNull: false,
     },
@@ -14,10 +14,10 @@ const Modelagens = connection.define('Modelagens',{
         type: Sequelize.STRING,
         allowNull: false,
     },
-    arquivoModelagem:{
+    arquivoModelagens:{
         type: Sequelize.STRING,
         allowNull: false, 
     },
 });
-Modelagens.sync({forse:false});
+Modelagens.sync({ force: true });
 export default Modelagens;
