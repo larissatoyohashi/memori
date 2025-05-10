@@ -1,9 +1,13 @@
 <%- include ('partials/header.ejs') %>
 <%- include ('partials/navbar.ejs') %>
 
+<div class="container-formulario">
+    <h3> Edição de Modelagens </h3>
+    <hr>
+
 <div class="wrapper">
     <div class="cadastrar">
-        <h4> Cadastrar Modelagem </h4>
+        <h4> Editar Modelagem </h4>
         <hr>
         <form action="/modelagens/update/<%= modelagens.id %>" method="POST">
             <div class="inserir-dados">
@@ -33,13 +37,12 @@
 
             <br><br>
             <div class="div-botao">
-                <button name="cadastrar-checkpoint" class="button-cadastro"> Cadastrar </button>
-            </div>
-            <input type="hidden" name="id" value="<%= modelagens.id %>">
-            <input type="submit" class="btn btn-warning" value="Alterar" onclick="return confirm (`Confirme as alterações realizadas para a modelagem <%= modelagens.nomeModelagens %>`)">
-            </div>
+                <input type="hidden" name="id" value="<%= modelagens.id %>">
+            <input type="submit" class="button-cadastro" value="Alterar" onclick="return confirm (`Confirme as alterações realizadas para a modelagem <%= modelagens.nomeModelagens %>`)">
+
+             </div>
         </form>
     </div>
-
+</div>
 
 <%- include ('partials/footer.ejs') %>

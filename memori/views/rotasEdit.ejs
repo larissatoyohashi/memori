@@ -1,3 +1,7 @@
+<%- include ('partials/header.ejs') %>
+<%- include ('partials/navbar.ejs') %>
+
+
 <div class="container-formulario">
     <h3> Registro de Rotas </h3>
     <hr>
@@ -8,23 +12,26 @@
         <form action="/rotas/update/<%= rota.id %>" method="POST">
             <div class="inserir-dados">
             <label> Titulo do Percurso:</label>
-            <input type="text" name="titulo-percurso" value="<%= rota.tituloRota %>" class="form-input" required>
+            <input type="text" name="tituloRota" value="<%= rota.tituloRota %>" class="form-input" required>
             <br>
             <label> Cidade localizada:</label>
-            <select name="cidades" value="<%= rota.cidadeLocalizada %>">
+            <select name="cidadeLocalizada" value="<%= rota.cidadeLocalizada %>">
                 <option value="Registro">Registro</option>
               </select> 
               <br>
             <label> Longitude:</label>
-            <input type="text" name="longitude-inicio" value="<%= rota.longitudeRota %>" class="form-input" required>
+            <input type="text" name="longitudeRota" value="<%= rota.longitudeRota %>" class="form-input" required>
             <label>Latitude:</label>
-            <input type="text" name="latitude-inicio" value="<%= rota.latitudeRota %>" class="form-input" required>
+            <input type="text" name="latitudeRota" value="<%= rota.latitudeRota %>" class="form-input" required>
+            
+            <label> Descrição:</label>
+            <input type="text" name="descricaoRota"  value="<%= rota.descricaoRota %>"  class="form-input" required> 
             <br><br>
 
             <label>Imagem de capa:</label>
             <div class="cadastro-arquivo" method="post" enctype="multipart/form-data">
                 <form action="/upload-capa">
-                    <input type="file" name="imagemCapa" value="<%= rota.imagemCapa %>" class="btn-arquivo" required>    
+                    <input type="file" name="imagemCapa" value="<%= rota.imagemCapa %>" class="btn-arquivo">    
                 </form>
             </div>
 
@@ -32,8 +39,11 @@
                 <button name="cadastrar-rota" class="button-cadastro"> Cadastrar </button>
             </div>
             <br>
-            <input type="hidden" name="id" value="<%= checkpoint.id %>">
-            <input type="submit" class="btn btn-warning" value="Alterar" onclick="return confirm (`Confirme as alterações realizadas para o usuario <%= rota.tituloRota %>`)">
+            <input type="hidden" name="id" value="<%= rota.id %>">
+            <input type="submit" class="btn btn-warning" value="Alterar" onclick="return confirm (`Confirme as alterações realizadas para a rota <%= rota.tituloRota %>`)">
             </div>
         </form>
     </div>
+
+ 
+<%- include ('partials/footer.ejs') %>

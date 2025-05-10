@@ -8,42 +8,42 @@
     <div class="cadastrar">
         <h4> Cadastrar Checkpoint </h4>
         <hr>
-        <form action="/checkpoints/update/<%= checkpoints.id %>" method="POST">
+        <form action="/checkpoints/update/<%= checkpoint.id %>" method="POST">
             <div class="inserir-dados">
             <label> Nome do Checkpoint:</label>
-            <input type="text" name="nome-checkpoint" value="<%= checkpoints.nomeCheckpoint %>" class="form-input" required>
+            <input type="text" name="nomeCheckpoint" value="<%= checkpoint.nomeCheckpoint %>" class="form-input" required>
             <br>
 
             <label> Descrição do Checkpoint:</label>
-            <textarea id="descricao-checkpoint" name="descricao-checkpoint" value="<%= checkpoints.descricaoCheckpoint %>" class="form-input" placeholder="Digite nome do checkpoint">
+            <textarea name="descricaoCheckpoint" value="<%= checkpoint.descricaoCheckpoint %>" class="form-input" placeholder="Digite nome do checkpoint">
             </textarea>
 
             <br>
             <label> Rota do Checkpoint: </label>
-            <select name="rota-checkpoint" value="<%= checkpoints.tituloRota %>">
+            <select name="tituloRota" value="<%= checkpoint.tituloRota %>">
                 <option value="#">KKKK</option>
               </select> 
               <br>
 
             <label> Longitude do Checkpoint:</label>
-            <input type="text" name="longitude-checkpoint" value="<%= checkpoints.longitudeCheckpoint %>" class="form-input" required>
+            <input type="text" name="longitudeCheckpoint" value="<%= checkpoint.longitudeCheckpoint %>" class="form-input" required>
             <label>Latitude do Checkpoint:</label>
-            <input type="text" name="latitude-checkpoint" value="<%= checkpoints.latitudeCheckpoint %>" class="form-input" required>
+            <input type="text" name="latitudeCheckpoint" value="<%= checkpoint.latitudeCheckpoint %>" class="form-input" required>
             
             <label>Imagem do Checkpoint:</label>
             <div class="cadastro-arquivo" method="post" enctype="multipart/form-data">
                 <form action="/upload-foto-checkpoint">
-                    <input type="file" name="upload-capa" value="<%= checkpoints.imagemCheckpoint %>" class="btn-arquivo" required>    
+                    <input type="file" name="imagemCheckpoint" value="<%= checkpoint.imagemCheckpoint %>" class="btn-arquivo">    
                 </form>
             </div>
-            
+
             <br><br>
             <div class="div-botao">
                 <button name="cadastrar-checkpoint" class="button-cadastro"> Cadastrar </button>
             </div>
             <br>
             <input type="hidden" name="id" value="<%= checkpoint.id %>">
-            <input type="submit" class="btn btn-warning" value="Alterar" onclick="return confirm (`Confirme as alterações realizadas para o checkpoint <%= checkpoints.nomeCheckpoint %>`)">
+            <input type="submit" class="btn btn-warning" value="Alterar" onclick="return confirm (`Confirme as alterações realizadas para o checkpoint <%= checkpoint.nomeCheckpoint %>`)">
             </div>
         </form>
     </div>

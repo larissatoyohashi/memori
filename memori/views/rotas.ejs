@@ -1,7 +1,7 @@
 <%- include ('partials/header.ejs') %>
 <%- include ('partials/navbar.ejs') %>
-
-
+ 
+ 
 <div class="container-formulario">
     <h3> Registro de Rotas </h3>
     <hr>
@@ -11,31 +11,37 @@
         <hr>
         <form action="/rotas/new" method="POST">
             <div class="inserir-dados">
-            <label> Titulo da Rota:</label>
-            <input type="text" name="titulo-rota" placeholder="Digite o titulo do percurso" class="form-input" required>
+            <label> Titulo do Percurso:</label>
+            <input type="text" name="tituloRota" placeholder="Digite o titulo do percurso" value="<%= rotas.tituloRota %>" class="form-input" required>
             <br>
             <label> Cidade localizada:</label>
-            <select name="cidades" id="cidades">
+            <select name="cidadeLocalizada" id="cidades">
                 <option value="Registro">Registro</option>
-              </select> 
+              </select>
               <br>
             <label> Longitude:</label>
-            <input type="text" name="longitude-inicio" placeholder="Digite a longitude" class="form-input" required>
+            <input type="text" name="longitudeRota" placeholder="Digite a longitude" value="<%= rotas.longitudeRota %>" class="form-input" required>
             <label>Latitude:</label>
-            <input type="text" name="latitude-inicio" placeholder="Digite a latitude" class="form-input" required>
+            <input type="text" name="latitudeRota" placeholder="Digite a latitude" value="<%= rotas.latitudeRota %>"class="form-input" required>
+            <label> Descrição:</label>
+            <input type="text" name="descricaoRota" placeholder="Digite a descrição" value="<%= rotas.descricaoRota %>" class="form-input" required> 
+
+            <br><br>
+              
             <label>Imagem de capa:</label>
             <div class="cadastro-arquivo" method="post" enctype="multipart/form-data">
                 <form action="/upload-capa">
-                    <input type="file" name="upload-capa" class="btn-arquivo" required>    
-                </form>
+                    <input type="file" name="imagemCapa" value="<%= rotas.imagemCapa %>" class="btn-arquivo">    
+                </form> 
             </div>
+ 
             <div class="div-botao">
-                <button name="cadastrar-rota" class="button-cadastro"> Cadastrar </button>
+                <button name="cadastrar-rota" class="button-cadastro"  type="submit"> Cadastrar </button>
             </div>
             </div>
         </form>
     </div>
-
+ 
         <div class="consultar">
             <h4> Consultar Rotas </h4>
             <div class= "pesquisa">
@@ -49,6 +55,20 @@
                 <th> Latitude </th>
                 <th> Capa </th>
               </thead>
+              <tbody>
+                <% rotas.forEach(rota => { %>
+                <tr>
+                    <td><%= rota.tituloRota %></td>
+                    <td><%= rota.cidadeLocalizada %></td>
+                    <td><%= rota.longitudeRota %></td>
+                    <td><%= rota.latitudeRota %></td>
+                    <td><%= rota.imagemCapa %></td>
+                    <td><%= rota.descricaoRota %></td>
+                    <td><a style="color: orange;" href="/rotas/edit/<%= rota.id %>">Editar</a></td>
+                    <td><a style="color: red;" href="/rotas/delete/<%= rota.id %>">Excluir</a></td>
+                </tr>
+                <% }) %>
+              </tbody>
                 <tr>
                     <td>a</td>
                     <td>KKKK</td>
@@ -56,20 +76,23 @@
                     <td>xxxxxxxxxx</td>
                     <td>yyyyyyyyyy</td>
                     <td><img src="#" height="20px"></td>
-                    <td><img src="#" height="20px"></td>
                     <td>
-                        <Button name="editar-rota" class="btn-editar" id="editar-rota"> <i class = "fas fa-pencil"></i>
+                        <Button name="abrir-mapa" class="abrir-mapa"> <i class = "fas fa-map"></i></Button>
+                    </td>
+                    <td>
+                        <Button name="editar-rota" class="btn-editar"> <i class = "fas fa-pencil"></i>
                         </Button>
                     </td>
                     <td>
-                        <Button name="excluir-rota" class="btn-excluir" id="excluir-rota"> <i class = "fas fa-cancel"></i></Button>
+                        <Button name="excluir-rota" class="btn-excluir"> <i class = "fas fa-cancel"></i></Button>
                     </td>
                 </tr>
-                
+               
             </table>
     </div>
 </div>
 </div>
-
-
+ 
+ 
 <%- include ('partials/footer.ejs') %>
+ 

@@ -494,13 +494,7 @@ select{
           font-family: Louis George Cafe;
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 9713769077628d80b5534853facf40d9fa18ba79
-=======
->>>>>>> 9713769077628d80b5534853facf40d9fa18ba79
     .btn-arquivo{
     border: none;
     color: #111;
@@ -511,8 +505,7 @@ select{
     font-size: 15px;
     border-radius: 12px;
     font-family: Louis George Cafe;
-<<<<<<< HEAD
-<<<<<<< HEAD
+
     }
 
 
@@ -553,9 +546,41 @@ select{
       font-family: Louis George Cafe;
     }
 
-=======
-    }
->>>>>>> 9713769077628d80b5534853facf40d9fa18ba79
-=======
-    }
->>>>>>> 9713769077628d80b5534853facf40d9fa18ba79
+
+/*TELA DE LOGIN*/
+
+.tela-login{
+    position: absolute;
+    font-family: Louis George Cafe;
+    background-color: #ffffff; 
+    height: 500px;
+    width: 500px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    border: solid #FF6B6B;
+    text-align: left;
+    padding-left: 100px;
+    line-height: 30px;
+    padding-right: 50px;
+    padding-top: 150px;
+    
+}
+
+.form-login{
+    position: absolute;
+    text-align: center;
+    font-family: Louis George Cafe;
+    background-color: #FF6B6B; 
+    height: 500px;
+    width: 700px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius:25px;
+    top:50%;
+    left: 35%;
+    right: 0px;
+    transform: translate(-50%, -50%);
+    float: left !important;
+}

@@ -1,7 +1,7 @@
 import Sequelize from "sequelize";
 import connection from "../config/sequelize-config.js";
 
-const CadastrarRotas = connection.define('CadastrarRotas',{
+const Rotas = connection.define('Rotas',{
     tituloRota:{
         type: Sequelize.STRING,
         allowNull: false,
@@ -10,7 +10,7 @@ const CadastrarRotas = connection.define('CadastrarRotas',{
         type: Sequelize.STRING,
         allowNull: false,
     },
-    longituteRota:{
+    longitudeRota:{
         type: Sequelize.FLOAT,
         allowNull: false, 
     },
@@ -27,5 +27,5 @@ const CadastrarRotas = connection.define('CadastrarRotas',{
         allowNull: false,
     }
 })
-CadastrarRotas.sync({force:true});
-export default CadastrarRotas;
+Rotas.sync({force:true});
+export default Rotas;

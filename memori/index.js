@@ -11,7 +11,7 @@ import QuizzesController from "./controllers/QuizzesController.js";
 
 import connection from "./config/sequelize-config.js";
 
-import CadastrarRotas from "./models/CadastrarRotas.js";
+import Rotas from "./models/Rotas.js";
 import Checkpoints from "./models/Checkpoints.js";
 import Modelagens from "./models/Modelagens.js";
 import Quizzes from "./models/Quizzes.js";

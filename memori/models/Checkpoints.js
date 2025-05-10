@@ -4,27 +4,27 @@ import connection from "../config/sequelize-config.js";
 const Checkpoints = connection.define('checkpoints',{
     nomeCheckpoint:{
         type: Sequelize.STRING,
-        allowNull: false,
+        allowNull: true,
     },
     latitudeCheckpoint:{
         type: Sequelize.FLOAT,
-        allowNull: false, 
+        allowNull: true, 
     },
     longitudeCheckpoint:{
         type: Sequelize.FLOAT,
-        allowNull: false,
+        allowNull: true,
     },
     tituloRota:{
         type: Sequelize.STRING,
-        allowNull: false,
+        allowNull: true,
     },
     descricaoCheckpoint:{
         type: Sequelize.TEXT,
-        allowNull: false,
+        allowNull: true,
     },
     imagemCheckpoint:{
         type: Sequelize.STRING,
-        allowNull: false,
+        allowNull: true,
     }
 });
 Checkpoints.sync({force:true});

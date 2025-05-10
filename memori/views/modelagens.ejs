@@ -1,6 +1,10 @@
 <%- include ('partials/header.ejs') %>
 <%- include ('partials/navbar.ejs') %>
 
+<div class="container-formulario">
+  <h3> Registro de Modelagens </h3>
+  <hr>
+
 <div class="wrapper">
     <div class="cadastrar">
         <h4> Cadastrar Modelagem </h4>
@@ -52,6 +56,35 @@
               </thead>
 
               <tbody>
+
+                <tr>
+                  <td>1</td>
+                  <td>Casa Suburbana</td>
+                  <td>Praça Beira-Rio</td>
+                  <td>Registro/SP</td>
+                  <td>Casa Suburbana.tgif</td>
+                  <td>
+                      <Button name="editar-rota" class="btn-editar"> <i class = "fas fa-pencil"></i>
+                      </Button>
+                  </td>
+                  <td>
+                      <Button name="excluir-rota" class="btn-excluir"> <i class = "fas fa-cancel"></i></Button>
+                  </td>
+                  <td>
+                    <Button name="abrir-mapa" class="abrir-modelagem" id="abrir-mapa"> <i class = "fas fa-cube"></i></Button>
+
+                        <dialog id="conteudo-mapa">
+                            <div class="corpo-modal">
+                                <main>
+                                    <div id="container3D"></div>
+                                  </main>                                    
+                            </div>
+                        </dialog>
+
+            </td>
+                  
+              </tr>
+
                 <% modelagens.forEach(modelagens => { %>
                 <tr>
                     <td><%= modelagens.id %></td>
@@ -61,6 +94,18 @@
                     <td><%= modelagens.arquivoModelagens %></td>
                     <td><a href="/modelagens/edit/<%= modelagens.id %>"> <Button name="editar-usuario" class="btn-editar"> <i class = "fas fa-pencil"></i></Button></a></td>
                     <td><a href="/modelagens/delete/<%= modelagens.id %>"><Button name="excluir-usuario" class="btn-excluir"> <i class = "fas fa-cancel"></i></Button></a></td>
+                    <td>
+                      <Button name="abrir-mapa" class="abrir-modelagem" id="abrir-mapa"> <i class = "fas fa-cube"></i></Button>
+
+                          <dialog id="conteudo-mapa">
+                              <div class="corpo-modal">
+                                  <main>
+                                      <div id="container3D"></div>
+                                    </main>                                    
+                              </div>
+                          </dialog>
+
+              </td>
                 </tr>
                 <% }) %>
               </tbody>
@@ -69,6 +114,7 @@
                 
             </table>
     </div>
+</div>
 </div>
 
 <%- include ('partials/footer.ejs') %>

@@ -12,35 +12,34 @@
         <form action="/checkpoints/new" method="POST">
             <div class="inserir-dados">
             <label> Nome do Checkpoint:</label>
-            <input type="text" name="nomeCheckpoint" value="<%= checkpoints.nomeCheckpoint %>" class="form-input">
+            <input type="text" name="nomeCheckpoint" value="<%= checkpoints.nomeCheckpoint%>" class="form-input">
             <br>
 
             <label> Descrição do Checkpoint:</label>
-            <textarea id="descricao-checkpoint" name="descricaoCheckpoint" value="<%= checkpoints.descricaoCheckpoint %>" class="form-input">
-            </textarea>
+            <input type="text" name="descricaoCheckpoint" value="<%= checkpoints.descricaoCheckpoint%>" class="form-input">
 
             <br>
             <label> Rota do Checkpoint: </label>
-            <select name="rota-checkpoint" value="<%= checkpoints.tituloRota %>">
-                <option value="#">KKKK</option>
+            <select name="tituloRota" value="<%= checkpoints.tituloRota %>">
+                <option value="kkkk">KKKK</option>
               </select> 
               <br>
 
             <label> Longitude do Checkpoint:</label>
-            <input type="text" name="longitude-checkpoint" value="<%= checkpoints.longitudeCheckpoint %>" class="form-input" required>
+            <input type="text" name="longitudeCheckpoint" value="<%= checkpoints.longitudeCheckpoint %>" class="form-input" required>
             <label>Latitude do Checkpoint:</label>
-            <input type="text" name="latitude-checkpoint" value="<%= checkpoints.latitudeCheckpoint %>" class="form-input" required>
+            <input type="text" name="latitudeCheckpoint" value="<%= checkpoints.latitudeCheckpoint %>" class="form-input" required>
             
             <label>Imagem do Checkpoint:</label>
             <div class="cadastro-arquivo" method="post" enctype="multipart/form-data">
-                <form action="/upload-foto-checkpoint">
-                    <input type="file" name="upload-capa" value="<%= checkpoints.imagemCheckpoint %>" class="btn-arquivo" required>    
-                </form>
+               
+                    <input type="file" name="imagemCheckpoint" value="<%= checkpoints.imagemCheckpoint %>" class="btn-arquivo" required>    
+              
             </div>
             
             <br><br>
             <div class="div-botao">
-                <button name="cadastrar-checkpoint" class="button-cadastro"> Cadastrar </button>
+                <button name="cadastrar-checkpoint" class="button-cadastro" type="submit"> Cadastrar </button>
             </div>
             </div>
         </form>
@@ -58,21 +57,17 @@
                 <th> Longitude </th>
                 <th> Latitude </th>
                 <th> Imagem </th>
-
-              </thead>
-
-                <th style="text-align: center;" colspan="2">Ações:</th>
               </thead>
               <tbody>
                 <% checkpoints.forEach(checkpoint => { %>
                 <tr>
-                    <td><%= checkpoints.nomeCheckpoint %></td>
-                    <td><%= checkpoints.lagitudeCheckpoint %></td>
-                    <td><%= checkpoints.longitudeCheckpoint %></td>
-                    <td><%= checkpoints.tituloRota %></td>
-                    <td><%= checkpoints.descricaoCheckpoint %></td>
-                    <td><a style="color: orange;" href="/checkpoints/edit/<%= checkpoint.nomeCheckpoint %>">Editar</a></td>
-                    <td><a style="color: red;" href="/checkpoints/delete/<%= checkpoint.nomeCheckpoint %>">Excluir</a></td>
+                    <td><%= checkpoint.nomeCheckpoint %></td>
+                    <td><%= checkpoint.latitudeCheckpoint %></td>
+                    <td><%= checkpoint.longitudeCheckpoint %></td>
+                    <td><%= checkpoint.tituloRota %></td>
+                    <td><%= checkpoint.descricaoCheckpoint %></td>
+                    <td><a style="color: orange;" href="/checkpoints/edit/<%= checkpoint.id %>">Editar</a></td>
+                    <td><a style="color: red;" href="/checkpoints/delete/<%= checkpoint.id %>">Excluir</a></td>
                 </tr>
                 <% }) %>
               </tbody>
