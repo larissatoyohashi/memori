@@ -15,7 +15,7 @@
             <br>
 
             <label> Descrição do Checkpoint:</label>
-            <textarea name="descricaoCheckpoint" value="<%= checkpoint.descricaoCheckpoint %>" class="form-input" placeholder="Digite nome do checkpoint">
+            <textarea name="descricaoCheckpoint" value="<%= checkpoint.descricaoCheckpoint %>" class="form-input">
             </textarea>
 
             <br>
@@ -39,11 +39,11 @@
 
             <br><br>
             <div class="div-botao">
-                <button name="cadastrar-checkpoint" class="button-cadastro"> Cadastrar </button>
+                <input type="hidden" name="id" value="<%= checkpoint.id %>">
+            <input type="submit" class="button-cadastro" value="Alterar" onclick="return confirm (`Confirme as alterações realizadas para o checkpoint <%= checkpoint.nomeCheckpoint %>`)">Cadastrar </button>
             </div>
             <br>
-            <input type="hidden" name="id" value="<%= checkpoint.id %>">
-            <input type="submit" class="btn btn-warning" value="Alterar" onclick="return confirm (`Confirme as alterações realizadas para o checkpoint <%= checkpoint.nomeCheckpoint %>`)">
+            
             </div>
         </form>
     </div>

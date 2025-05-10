@@ -95,6 +95,18 @@
                     
                     <td><a href="/quizzes/edit/<%= quizzes.id %>"> <Button name="editar-usuario" class="btn-editar"> <i class = "fas fa-pencil"></i></Button></a></td>
                     <td><a href="/quizzes/delete/<%= quizzes.id %>"><Button name="excluir-usuario" class="btn-excluir"> <i class = "fas fa-cancel"></i></Button></a></td>
+
+                    <td>
+                      <Button name="abrir-mapa" class="abrir-modelagem" id="abrir-mapa"> <i class = "fas fa-video"></i></Button>
+  
+                          <dialog id="conteudo-mapa">
+                              <div class="corpo-modal">
+                                    <video src="/video/Tooro.mp4" type="video/mp4" controls="controls" autoplay="autoplay"></video>                                   
+                              </div>
+                          </dialog>
+  
+              </td>
+
                 </tr>
                 <% }) %>
               </tbody>

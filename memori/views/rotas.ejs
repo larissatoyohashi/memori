@@ -53,41 +53,36 @@
                 <th> Cidade </th>
                 <th> Longitude </th>
                 <th> Latitude </th>
-                <th> Capa </th>
+                <th> Descrição </th>
               </thead>
               <tbody>
                 <% rotas.forEach(rota => { %>
                 <tr>
+                    <td><%= rota.id %></td>
                     <td><%= rota.tituloRota %></td>
                     <td><%= rota.cidadeLocalizada %></td>
                     <td><%= rota.longitudeRota %></td>
                     <td><%= rota.latitudeRota %></td>
-                    <td><%= rota.imagemCapa %></td>
                     <td><%= rota.descricaoRota %></td>
-                    <td><a style="color: orange;" href="/rotas/edit/<%= rota.id %>">Editar</a></td>
-                    <td><a style="color: red;" href="/rotas/delete/<%= rota.id %>">Excluir</a></td>
+                    <td><a href="/rotas/edit/<%= rota.id %>"><Button name="editar-usuario" class="btn-editar"> <i class = "fas fa-pencil"></i></Button></a></td>
+                    <td><a href="/rotas/delete/<%= rota.id %>"><Button name="excluir-usuario" class="btn-excluir"> <i class = "fas fa-cancel"></i></Button></a></td>
+
+                    <td>
+                        <Button name="abrir-mapa" class="abrir-modelagem" id="abrir-mapa"> <i class = "fas fa-image"></i></Button>
+    
+                            <dialog id="conteudo-mapa">
+                                <div class="corpo-modal">
+                                    <main>
+                                        <img src="imgs/capas/KKKK.png" height="200px">
+                                      </main>                                    
+                                </div>
+                            </dialog>
+    
+                </td>
+
                 </tr>
                 <% }) %>
               </tbody>
-                <tr>
-                    <td>a</td>
-                    <td>KKKK</td>
-                    <td>Registro/SP</td>
-                    <td>xxxxxxxxxx</td>
-                    <td>yyyyyyyyyy</td>
-                    <td><img src="#" height="20px"></td>
-                    <td>
-                        <Button name="abrir-mapa" class="abrir-mapa"> <i class = "fas fa-map"></i></Button>
-                    </td>
-                    <td>
-                        <Button name="editar-rota" class="btn-editar"> <i class = "fas fa-pencil"></i>
-                        </Button>
-                    </td>
-                    <td>
-                        <Button name="excluir-rota" class="btn-excluir"> <i class = "fas fa-cancel"></i></Button>
-                    </td>
-                </tr>
-               
             </table>
     </div>
 </div>

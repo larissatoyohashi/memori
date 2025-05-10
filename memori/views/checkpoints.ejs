@@ -53,21 +53,34 @@
                 <th> Nome do Checkpoint </th>
                 <th> Descrição </th>
                 <th> Rota </th>
-                <th> Descrição </th>
-                <th> Longitude </th>
                 <th> Latitude </th>
-                <th> Imagem </th>
+                <th> Longitude </th>
               </thead>
               <tbody>
                 <% checkpoints.forEach(checkpoint => { %>
                 <tr>
+                    <td><%= checkpoint.id %></td>
                     <td><%= checkpoint.nomeCheckpoint %></td>
+                    <td><%= checkpoint.descricaoCheckpoint %></td>
+                    <td><%= checkpoint.tituloRota %></td>
                     <td><%= checkpoint.latitudeCheckpoint %></td>
                     <td><%= checkpoint.longitudeCheckpoint %></td>
-                    <td><%= checkpoint.tituloRota %></td>
-                    <td><%= checkpoint.descricaoCheckpoint %></td>
-                    <td><a style="color: orange;" href="/checkpoints/edit/<%= checkpoint.id %>">Editar</a></td>
-                    <td><a style="color: red;" href="/checkpoints/delete/<%= checkpoint.id %>">Excluir</a></td>
+                    <td><%= checkpoint.imagemCheckpoint %></td>
+                    <td><a href="/checkpoints/edit/<%= checkpoint.id %>"><Button name="editar-usuario" class="btn-editar"> <i class = "fas fa-pencil"></i></Button></a></td>
+                    <td><a href="/checkpoints/delete/<%= checkpoint.id %>"><Button name="excluir-usuario" class="btn-excluir"> <i class = "fas fa-cancel"></i></Button></a></td>
+                    <td>
+                      <Button name="abrir-mapa" class="abrir-modelagem" id="abrir-mapa"> <i class = "fas fa-map"></i></Button>
+  
+                          <dialog id="conteudo-mapa">
+                              <div class="corpo-modal">
+                                  <main>
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3630.9393819060433!2d-47.842970252507634!3d-24.487557096272983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c535001cc9a027%3A0x660e36945a045739!2sKKKK%20Registro%20-spppp!5e0!3m2!1spt-BR!2sbr!4v1746838800322!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                    </main>                                    
+                              </div>
+                          </dialog>
+  
+              </td>
+
                 </tr>
                 <% }) %>
               </tbody>
